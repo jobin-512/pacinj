@@ -28,33 +28,33 @@
   // Example content (you can extend this for other tabs)
   const content = {
     Meeting: {
-      title: "INDUSTRY LEADER IN PLASTIC INJECTED MOLDED TOTES AND CONTAINERS",
+      title: "Meeting – We Listen First. Always.",
       subtitle:
-        "We start every project with a collaborative meeting to align your goals with our expertise. Together, we define the scope, materials, and production requirements.",
+        "Before we touch a CAD file or fire up a machine, we sit down with you. Why? Because every client is different—and so is every challenge. In this initial phase, we work to fully understand your requirements:",
       points: [
-        "Client-focused project planning",
-        "Feasibility discussions",
-        "Material recommendations",
-        "Timeline & budget alignment"
+        "What kind of products are you storing or transporting?",
+        "How are your current containers falling short?",
+        "Are there weight limits, handling needs, or space constraints?",
+        "Do you have industry compliance or food-grade material requirements?"
       ],
       image:hero
     },
     Design: {
-      title: "Innovative Design Solutions",
+      title: "Design – We Engineer With You, Not Just for You",
       subtitle:
-        "Our design team creates solutions that merge durability, aesthetics, and cost-effectiveness while meeting functional requirements.",
+        "Once we’ve collected your inputs, our design team translates that into an intelligent, manufacturable solution. Here’s what you can expect:",
       points: [
-        "User-centered design approach",
-        "CAD modeling & simulations",
-        "Structural optimization",
-        "Customization for branding"
+        "Custom-fit CAD modeling that takes your specs and operational realities into account",
+        "Function-first design, incorporating handles, lids, stacking capabilities, drainage holes, or label slots as needed",
+        "Structural integrity that holds up under pressure—literally",
+        "Options for texture, finish, and reinforcement to improve grip and prevent slippage"
       ],
       image: hero
     },
     Prototype: {
-      title: "Turning Ideas Into Reality",
+      title: "Prototype – See It. Feel It. Test It.",
       subtitle:
-        "Prototyping allows us to validate designs before full-scale production. We help you test and refine your product to perfection.",
+        "After design comes something tangible—your prototype. This isn't just a rough draft; it’s your first chance to experience how your container performs in the real world. With rapid prototyping, you’ll be able to:",
       points: [
         "3D printed samples",
         "Rapid mold prototyping",
@@ -64,50 +64,48 @@
       image: hero
     },
     Analysis: {
-      title: "Data-Driven Product Analysis",
+      title: "Analysis – We Let the Data Do the Talking",
       subtitle:
-        "Our engineers conduct in-depth analysis to ensure strength, safety, and efficiency. We use advanced tools for product performance verification.",
+        "We take your prototype and push it to the limit. Our internal analysis process uses advanced testing tools and simulation software to ensure the product holds up under pressure. What we test:",
       points: [
-        "Stress & load testing simulations",
-        "Material property evaluation",
-        "Risk assessments",
-        "Regulatory compliance checks"
+        "Weight-bearing capacity and load distribution",
+        "Impact resistance, including drops and high-friction handling",
+        "Temperature and UV resistance for outdoor or cold-storage use",
+        "Material compliance with regulatory requirements (especially important in food, pharma, and agriculture)"
       ],
       image: hero
     },
     "Initial Test": {
-      title: "Quality First Testing",
+      title: "Initial Test – Real-World Trials Before Full Production",
       subtitle:
-        "Before mass production, we run initial tests to guarantee product integrity and confirm compliance with your expectations.",
+        "After lab analysis, we go one step further: real-world trials. We create a short-run production batch so you can test the containers in their intended environment—on your floor, with your team, in actual use. You’ll be able to:",
       points: [
-        "Functional performance tests",
-        "Environmental resistance checks",
-        "Prototype field trials",
-        "User feedback integration"
+        "Catch any last-minute tweaks that may be required",
+        "Evaluate how it holds up during actual use, including stacking, storing, washing, and transport",
+        "Feel 100% confident before scaling up to high-volume production"
       ],
       image: hero
     },
     Sustainability: {
-      title: "Sustainable Manufacturing Practices",
+      title: "Sustainability – Good for Business. Better for the Planet.",
       subtitle:
-        "We believe in eco-conscious production methods. Our processes minimize waste and maximize efficiency to protect the environment.",
+        "Sustainability isn’t a buzzword here—it’s part of our DNA. Every design decision we make includes an eco-conscious approach. Here’s how:",
       points: [
-        "Energy-efficient molding machines",
-        "Use of recyclable plastics",
-        "Reduced carbon footprint",
-        "Sustainable sourcing"
+        "Recyclable and reusable materials: We use high-performance polymers that are designed for long lifecycles and are recyclable at end-of-life",
+        "Reduced plastic waste: Through advanced mold design and lean manufacturing",
+        "Energy-efficient machines: Our injection molding equipment is optimized for reduced energy consumption",
+        "Made-in-Canada production: Less shipping distance = lower carbon footprint"
       ],
       image: hero
     },
     Recycling: {
-      title: "Commitment to Circular Economy",
+      title: "Recycling – We Close the Loop",
       subtitle:
-        "End-of-life products are not discarded—they are recycled and reintroduced into production, supporting a circular economy.",
+        "Every product we create is built for durability, but we also think ahead. When it’s time to retire a bin or tote, we want to make that transition easy and responsible. Our recycling program:",
       points: [
-        "Closed-loop recycling programs",
-        "Post-consumer resin usage",
-        "Material recovery systems",
-        "Zero-waste initiatives"
+        "Helps you reclaim and recycle used containers",
+        "Offers closed-loop solutions for clients with high-volume needs",
+        "Supports your internal ESG and sustainability goals"
       ],
       image:hero
     }
@@ -234,10 +232,10 @@
   <div class="container mx-auto px-4">
     <div class="max-w-2xl text-white">
       <h1 class="text-5xl md:text-6xl font-bold mb-4">
-        Empowering New Jersey Seniors to Thrive at Home
+        Durable. Custom. Trusted.
       </h1>
       <p class="text-lg md:text-xl mb-8">
-        Personalized, coordinated care for adults 55+ so you can stay safely in your community.
+        Plastic Injection Molding Solutions Built for Strength, Service & Scale
       </p>
       <div class="flex flex-col sm:flex-row gap-4 ">
         <a
@@ -260,7 +258,7 @@
 <section class="py-12 px-4 max-w-7xl mx-auto">
   <p class="text-sm text-green-700 font-semibold mb-2">Custom Molding</p>
   <h2 class="text-3xl md:text-4xl font-bold mb-6">
-    The support you need, the independence you deserve.
+    PIM’s Story: The 7-Step Process That Delivers Results
   </h2>
 
   <!-- Tabs -->
