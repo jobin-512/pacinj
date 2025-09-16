@@ -1,15 +1,21 @@
 <script>
     import hero from '$lib/assets/hero.svg';
     import Contact from '$lib/components/contact.svelte';
+    import p1 from "$lib/assets/1/1.jpg"
+    import p2 from "$lib/assets/2/1.jpg"
+    import p3 from "$lib/assets/3/1.jpg"
+    import p4 from "$lib/assets/4/1.jpg"
+    import p5 from "$lib/assets/5/1.jpg"
+    import p6 from "$lib/assets/6/1.jpg"
 
 
     let products = [
-    { id: 1, name: "Agriculture Containers", reviews: 12, rating: 4.5, tag: "New", image:hero ,link: "/"},
-    { id: 2, name: "Cucumber Tote", reviews: 50, rating: 5, tag: "New", image: hero ,link: "/" },
-    { id: 3, name: "Assorted Berry Containers", reviews: 10, rating: 4, tag: "New", image: hero ,link: "/" },
-    { id: 4, name: "Berry Tray with Divider", reviews: 15, rating: 4.5, tag: "New", image: hero ,link: "/" },
-    { id: 5, name: "Berry Tray without Divider", reviews: 22, rating: 5, tag: "", image: hero  ,link: "/"},
-    { id: 6, name: "Fruit/Veg. Harvesting", reviews: 30, rating: 4.5, tag: "", image: hero ,link: "/"},
+    { id: 1, name: "Small Ventilated Agriculture Tote", reviews: 12, rating: 4.5, tag: "New", image:p1 ,link: "/products/1"},
+    { id: 2, name: "Large Agriculture Tote", reviews: 50, rating: 5, tag: "New", image: p2 ,link: "/products/2" },
+    { id: 3, name: "Large Ventilated Agriculture Tote", reviews: 10, rating: 4, tag: "New", image: p3 ,link: "/products/3" },
+    { id: 4, name: "Milk Crates (Divided / Non-divided)", reviews: 15, rating: 4.5, tag: "New", image: p4 ,link: "/products/4" },
+    { id: 5, name: "Harvest Berry Tray", reviews: 22, rating: 5, tag: "", image: p5  ,link: "/products/5"},
+    { id: 6, name: "Half Bushel Basket", reviews: 30, rating: 4.5, tag: "", image: p6 ,link: "/products/6"},
     { id: 7, name: "Fruit/Veg. Harvesting Lugs", reviews: 18, rating: 4, tag: "", image: hero ,link: "/"},
     { id: 8, name: "Grape Container", reviews: 20, rating: 5, tag: "New", image: hero ,link: "/"},
     { id: 9, name: "Milk Crates", reviews: 25, rating: 4, tag: "New", image: hero ,link: "/"},
@@ -55,7 +61,7 @@
           </span>
         {/if}
 
-        <img src={product.image} alt={product.name} class="w-full h-40 object-cover" />
+        <img src={product.image} alt={product.name} class="w-full h-[25rem] object-cover" />
 
         <div class="p-4 space-y-2">
           <h3 class="text-lg font-medium">{product.name}</h3>
