@@ -10,12 +10,12 @@
 
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About P.I.M', href: '/' },
-    { name: 'Products', href: '/' },
-    { name: 'Recycling', href: '/' },
-    { name: 'Custom Molding', href: '/' },
-    { name: 'SUSTAINABILLEY', href: '/' },
-    { name: 'BLOG', href: '/' },
+    { name: 'About P.I.M', href: '/aboutus' },
+    { name: 'Products', href: '/products' },
+    { name: 'Recycling', href: '/recycling' },
+    { name: 'Custom Molding', href: '/custom-molding' },
+    { name: 'SUSTAINABILLEY', href: '/sustainability' },
+    { name: 'BLOG', href: '/blog' },
     { name: 'Contact Us', href: '/contactus' }
   ];
 
@@ -37,7 +37,7 @@
       <a href="tel:+16048595503" class="hover:text-gray-300">+1 (604) 859-5503</a>
     </div>
     <div class="flex items-center space-x-4">
-      <a href="/" class="hover:text-gray-300">Why P.I.M?</a>
+      <a href="/aboutus" class="hover:text-gray-300">Why P.I.M?</a>
       <div class="flex items-center space-x-2">
         {#each socialLinks as link}
           <a 
@@ -81,7 +81,7 @@
         </nav>
 
         <!-- Mobile menu button -->
-        <button class="lg:hidden" on:click={toggleMenu}>
+        <button class="lg:hidden" on:click={toggleMenu} aria-label="Toggle navigation menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>

@@ -38,11 +38,11 @@
     <div>
       <h3 class="text-xl font-semibold mb-6">Quick Links</h3>
       <ul class="space-y-3 text-base">
-        <li class="flex items-center gap-2">› About Us</li>
-        <li class="flex items-center gap-2">› Service</li>
-        <li class="flex items-center gap-2">› Best Seller</li>
-        <li class="flex items-center gap-2">› Privacy Policy</li>
-        <li class="flex items-center gap-2">› Terms & Conditions</li>
+        <li class="flex items-center gap-2"><a href="/aboutus" class="hover:underline">› About Us</a></li>
+        <li class="flex items-center gap-2"><a href="/products" class="hover:underline">› Products</a></li>
+        <li class="flex items-center gap-2"><a href="/recycling" class="hover:underline">› Recycling</a></li>
+        <li class="flex items-center gap-2"><a href="/sustainability" class="hover:underline">› Sustainability</a></li>
+        <li class="flex items-center gap-2"><a href="/contactus" class="hover:underline">› Contact Us</a></li>
       </ul>
     </div>
 
@@ -72,8 +72,8 @@
   <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-base text-gray-200 text-center align-middle ">
     <p>© 2023 WeDesignTech. All Rights Reserved.</p>
     <div class="flex gap-10 mt-6 md:mt-0">
-      <a href="#" class="hover:underline">Terms And Condition</a>
-      <a href="#" class="hover:underline">Privacy Policy</a>
+      <a href="/terms" class="hover:underline">Terms And Condition</a>
+      <a href="/privacy" class="hover:underline">Privacy Policy</a>
     </div>
   </div>
 </footer>
