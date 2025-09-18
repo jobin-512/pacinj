@@ -3,12 +3,37 @@
   let email = "";
   let subject = "";
   let message = "";
+  let sending = false;
+  let success = false;
+  let error = "";
 
-  function handleSubmit(e) {
+  /** @param {SubmitEvent} e */
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log({ name, email, subject, message });
-    // You can replace this with an API call or email service
-    alert("Message sent!");
+    sending = true;
+    success = false;
+    error = "";
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, subject, message })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        error = data?.error || 'Failed to send message';
+      } else {
+        success = true;
+        name = '';
+        email = '';
+        subject = '';
+        message = '';
+      }
+    } catch (err) {
+      error = 'Network error. Please try again.';
+    } finally {
+      sending = false;
+    }
   }
 </script>
 
@@ -18,35 +43,41 @@
     <!-- Contact Form -->
     <div class="md:col-span-2 bg-gray-50 p-8 rounded-lg">
       <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
+      {#if success}
+        <div class="mb-4 p-3 rounded bg-green-100 text-green-800">Your message has been sent. We will get back to you soon.</div>
+      {/if}
+      {#if error}
+        <div class="mb-4 p-3 rounded bg-red-100 text-red-700">{error}</div>
+      {/if}
       <form class="space-y-6" on:submit|preventDefault={handleSubmit}>
         
         <!-- Name + Email -->
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <label class="block text-gray-700 mb-2">Your name</label>
-            <input type="text" bind:value={name} class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600" />
+            <label for="contact-name" class="block text-gray-700 mb-2">Your name</label>
+            <input id="contact-name" type="text" bind:value={name} required class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600" />
           </div>
           <div>
-            <label class="block text-gray-700 mb-2">Email address</label>
-            <input type="email" bind:value={email} class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600" />
+            <label for="contact-email" class="block text-gray-700 mb-2">Email address</label>
+            <input id="contact-email" type="email" bind:value={email} required class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600" />
           </div>
         </div>
 
         <!-- Subject -->
         <div>
-          <label class="block text-gray-700 mb-2">Subject</label>
-          <input type="text" bind:value={subject} class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600" />
+          <label for="contact-subject" class="block text-gray-700 mb-2">Subject</label>
+          <input id="contact-subject" type="text" bind:value={subject} class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600" />
         </div>
 
         <!-- Message -->
         <div>
-          <label class="block text-gray-700 mb-2">Write Your Message</label>
-          <textarea rows="5" bind:value={message} class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600"></textarea>
+          <label for="contact-message" class="block text-gray-700 mb-2">Write Your Message</label>
+          <textarea id="contact-message" rows="5" bind:value={message} required class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-600"></textarea>
         </div>
 
         <!-- Button -->
-        <button type="submit" class="bg-red-500 text-white px-6 py-3 rounded font-semibold hover:bg-red-600 transition">
-          Send Message
+        <button type="submit" class="bg-red-500 text-white px-6 py-3 rounded font-semibold hover:bg-red-600 transition disabled:opacity-60" disabled={sending}>
+          {sending ? 'Sending…' : 'Send Message'}
         </button>
       </form>
     </div>

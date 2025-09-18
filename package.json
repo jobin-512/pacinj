@@ -41,6 +41,7 @@
 		"@sveltejs/adapter-node": "^5.3.1",
 		"@tailwindcss/vite": "^4.1.12",
 		"lucide-svelte": "^0.540.0",
+		"nodemailer": "^7.0.6",
 		"tailwindcss": "^4.1.12"
 	}
 }
