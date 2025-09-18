@@ -14,7 +14,7 @@
     { name: 'Products', href: '/products' },
     { name: 'Recycling', href: '/recycling' },
     { name: 'Custom Molding', href: '/custom-molding' },
-    { name: 'SUSTAINABILLEY', href: '/sustainability' },
+    { name: 'Sustainability', href: '/sustainability' },
     { name: 'BLOG', href: '/blog' },
     { name: 'Contact Us', href: '/contactus' }
   ];
