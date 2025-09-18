@@ -1,19 +1,36 @@
 import type { RequestHandler } from './$types';
 import nodemailer from 'nodemailer';
-import { env } from '$env/dynamic/private';
+import { env as kitEnv } from '$env/dynamic/private';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+
+const env = new Proxy(kitEnv as any, {
+  get(target, prop: string) {
+    const val = (target as any)[prop];
+    if (val !== undefined) return val;
+    const proc = (globalThis as any).process;
+    return proc && proc.env ? proc.env[prop as any] : undefined;
+  }
+}) as any;
 
 function createTransport() {
-  const host = env.SMTP_HOST;
+  const host = env.SMTP_HOST as string | undefined;
   const port = Number(env.SMTP_PORT || 587);
-  const user = env.SMTP_USER;
-  const pass = env.SMTP_PASS;
+  const user = env.SMTP_USER as string | undefined;
+  const pass = env.SMTP_PASS as string | undefined;
+
+  if (!user || !pass) {
+    throw new Error('SMTP_USER and SMTP_PASS must be set (use Gmail App Password if using Gmail)');
+  }
 
   if (host) {
     return nodemailer.createTransport({
       host,
       port,
       secure: port === 465,
-      auth: user && pass ? { user, pass } : undefined
+      requireTLS: port === 587,
+      auth: { user, pass }
     });
   }
   return nodemailer.createTransport({
@@ -23,7 +40,13 @@ function createTransport() {
 }
 
 export const POST: RequestHandler = async ({ request }) => {
-  const transporter = createTransport();
+  let transporter;
+  try {
+    transporter = createTransport();
+  } catch (cfgErr) {
+    return new Response(JSON.stringify({ error: (cfgErr as Error).message }), { status: 500 });
+  }
+
   try {
     const contentType = request.headers.get('content-type') || '';
     if (!contentType.includes('application/json')) {
@@ -55,18 +78,15 @@ export const POST: RequestHandler = async ({ request }) => {
       return new Response(JSON.stringify({ error: 'Validation failed', errors }), { status: 400 });
     }
 
-    const toAddress = env.CONTACT_TO || env.SMTP_USER;
-    const fromUser = env.SMTP_USER;
-    if (!toAddress || !fromUser) {
-      return new Response(JSON.stringify({ error: 'Server email not configured' }), { status: 500 });
-    }
+    const toAddress = (env.CONTACT_TO as string | undefined) || (env.SMTP_USER as string | undefined) || email;
+    const fromUser = env.SMTP_USER as string;
 
-    // Verify transporter configuration up-front
     try {
       await transporter.verify();
     } catch (verifyErr) {
+      const msg = 'Email transport not ready. Verify SMTP_HOST/PORT (or Gmail), and use a valid SMTP password/App Password.';
       console.error('Nodemailer verify failed:', verifyErr);
-      return new Response(JSON.stringify({ error: 'Email transport not ready. Check SMTP credentials or app password.' }), { status: 500 });
+      return new Response(JSON.stringify({ error: msg }), { status: 500 });
     }
 
     const text = `New contact form submission\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
@@ -75,7 +95,7 @@ export const POST: RequestHandler = async ({ request }) => {
 <p><b>Email:</b> ${email}</p>
 <p><b>Subject:</b> ${subject}</p>
 <p><b>Message:</b></p>
-<pre style="white-space:pre-wrap;">${message}</pre>`;
+<pre style=\"white-space:pre-wrap;\">${message}</pre>`;
 
     const info = await transporter.sendMail({
       from: `${name} via Website <${fromUser}>`,
@@ -83,10 +103,13 @@ export const POST: RequestHandler = async ({ request }) => {
       subject: `[Website] ${subject}`,
       replyTo: `${name} <${email}>`,
       text,
-      html
+      html,
+      envelope: { from: fromUser, to: toAddress }
     });
 
-    return new Response(JSON.stringify({ ok: true, messageId: info.messageId }), { status: 200 });
+    const warnings = env.CONTACT_TO ? undefined : 'CONTACT_TO missing; delivered to SMTP_USER (or sender) as fallback.';
+
+    return new Response(JSON.stringify({ ok: true, messageId: info.messageId, warnings }), { status: 200 });
   } catch (err: unknown) {
     console.error('Contact form error:', err);
     const msg = err instanceof Error ? err.message : 'Failed to send message';
