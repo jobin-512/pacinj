@@ -60,131 +60,113 @@
     </div>
   </section>
 
-  <section class="py-20">
-    <div class="container mx-auto px-4">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Left: Large placeholder image -->
-        <div class="bg-gray-300 h-[420px] w-full"></div>
+  <!-- What We Do (redesign) -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="mb-10 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-3">What We Do</h2>
+        <p class="text-gray-600">Injection molded plastic solutions designed for demanding operations.</p>
+      </div>
 
-        <!-- Right: Copy -->
-        <div>
-          <p class="text-sm tracking-widest text-green-700 font-semibold mb-4 uppercase">Why PIM?</p>
-          <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
-            Because We Deliver What Matters Most: Strength, Support, and Service.
-          </h2>
-          <p class="text-gray-700 leading-relaxed mb-5">
-            When your business depends on containers that won&#39;t crack under pressure (literally or
-            figuratively), you need a partner who understands your industry and anticipates your needs.
-            That’s where we come in.
-          </p>
-          <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Industry-Leading Totes &amp; Bins</b><br>
-            From stackable containers to custom-sized storage units, our plastic injection-molded
-            products are engineered for performance in demanding commercial, industrial, and
-            logistics environments.
-          </p>
-          <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Proudly Canadian, Internationally Connected</b><br>
-            All of our manufacturing and service operations are based in Canada, giving us direct
-            control over quality. Through partnerships with trusted distributors across the U.S.,
-            Canada, and Mexico, we offer fast delivery, consistent availability, and local
-            service—wherever you are.
-          </p>
-          <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Custom Molding Services</b><br>
-            Need something specific? We offer full-service custom molding to bring your vision to
-            life. From concept to completion, our engineering team collaborates with yours to design,
-            prototype, and deliver purpose-built products.
-          </p>
-          <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Customer-Ranked #1 in Service &amp; Support</b><br>
-            Our customers consistently rank us #1 for industry support, response time, and
-            workmanship. We don’t just say we care—we prove it, with every order.
-          </p>
-          <a href="/contactus" class="inline-block bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded transition-colors">More About Us</a>
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+          <div class="w-full h-40 bg-gray-200 rounded mb-4"></div>
+          <h3 class="text-lg font-semibold mb-2">Plastic Totes</h3>
+          <p class="text-gray-700 text-sm mb-4">From stackable containers to custom‑sized storage units, our products are engineered for commercial, industrial, and logistics environments.</p>
+          <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+            <li>Stackable and nestable options</li>
+            <li>Ergonomic and lightweight</li>
+            <li>Impact‑resistant design</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+          <div class="w-full h-40 bg-gray-200 rounded mb-4"></div>
+          <h3 class="text-lg font-semibold mb-2">Containers &amp; Bins</h3>
+          <p class="text-gray-700 text-sm mb-4">Available in multiple sizes and configurations to support a wide range of uses—from picking and kitting to bulk storage.</p>
+          <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+            <li>Food‑grade materials available</li>
+            <li>Ventilation and drainage options</li>
+            <li>Label slots and interlocking bases</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col">
+          <div class="w-full h-40 bg-gray-200 rounded mb-4"></div>
+          <h3 class="text-lg font-semibold mb-2">Lids, Accessories &amp; Custom</h3>
+          <p class="text-gray-700 text-sm mb-4">Secure your load and streamline storage with purpose‑built lids and accessories—or create a custom solution with our full‑service molding.</p>
+          <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+            <li>Custom fit and finish</li>
+            <li>Hot‑stamped branding options</li>
+            <li>Engineered for lifecycle durability</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Our Philosophy (redesign) -->
   <section class="py-20">
     <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-8">What We Do?</h2>
-
-      <div class="space-y-4 text-gray-700 leading-relaxed">
-        <b>Injection Molded Plastic Solutions That Work as Hard as You Do</b>
-        <p>Whether you&#39;re in agriculture, warehousing, logistics, retail, or food service, PIM products are built to stand up to the demands of your operation.</p>
-        <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Plastic Totes –</b>
-            From stackable containers to custom-sized storage units, our plastic injection-molded
-            products are engineered for performance in demanding commercial, industrial, and
-            logistics environments.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Containers &amp; Bins –</b>
-            Offered in multiple sizes and configurations to support a wide range of uses.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Lids &amp; Accessories –</b>
-            Secure your load, streamline your storage, and protect your inventory with custom-fit lids and extras.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Custom Molded Solutions –</b>
-            Tailored to your specs. Designed to meet your functional,
-            branding, and performance needs.
-        </p>
-        <p>All of our products are molded using high-quality, recyclable plastic and engineered with user
-            experience in mind—lightweight yet rugged, smooth-edged yet impact-resistant, and easy to
-            handle no matter the environment.</p>
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Our Philosophy</h2>
+          <p class="text-gray-700 mb-6"><b>Reliable Products. Responsive Service. Real Partnerships.</b></p>
+          <p class="text-gray-700 mb-4">Containers should be the one thing you never worry about. We build products that work—day in, day out, year after year.</p>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-gray-50 rounded-xl border p-5">
+              <h3 class="font-semibold mb-2">Responsiveness</h3>
+              <p class="text-sm text-gray-700">No surprises, no fine print—just honest, fast support.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl border p-5">
+              <h3 class="font-semibold mb-2">Transparency</h3>
+              <p class="text-sm text-gray-700">Clear communication and predictable timelines.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl border p-5">
+              <h3 class="font-semibold mb-2">Long‑Term Thinking</h3>
+              <p class="text-sm text-gray-700">We help you grow, improve, and scale with confidence.</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl border p-5">
+              <h3 class="font-semibold mb-2">Quality First</h3>
+              <p class="text-sm text-gray-700">Engineered for performance, validated by testing.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="w-full h-[420px] bg-gray-300 rounded"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20">
+  <!-- Industries We Serve (redesign) -->
+  <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-8">Our Philosophy</h2>
-
-      <div class="space-y-4 text-gray-700 leading-relaxed">
-        <b>Reliable Products. Responsive Service. Real Partnerships.</b>
-        <p>At PIM, we believe that containers should be the one part of your operation you never have to
-            think about. That’s why we focus on building products that just work—day in, day out, year after
-            year.</p>
-        <p>But great products are only half the story. We’re also proud of the way we do business:</p>
-        <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Responsiveness –</b>
-            No surprises, no fine print. Just straightforward, honest service.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Transparency –</b>
-            Offered in multiple sizes and configurations to support a wide range of uses.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-8">
-            <b>Long-Term Thinking –</b>
-            We’re not just here to fill a PO. We’re here to help you grow, improve, and scale with confidence.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Industries We Serve</h2>
-      <p class="text-gray-700 mb-8">We&#39;re proud to support organizations in:</p>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-800">
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Warehousing &amp; Distribution</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Manufacturing</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Agriculture</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Retail &amp; Grocery</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Automotive</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Food &amp; Beverage</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>E-commerce</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Medical &amp; Pharma</span></div>
-        <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Cannabis</span></div>
+      <div class="mb-8 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-3">Industries We Serve</h2>
+        <p class="text-gray-600">Proudly supporting operations across North America.</p>
       </div>
 
-      <p class="text-gray-700 leading-relaxed mt-10 max-w-3xl">
-        No matter your sector, if you need reliable storage and handling solutions, we’re here to help.
-      </p>
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="lg:col-span-2">
+          <div class="grid sm:grid-cols-2 gap-4 text-gray-800">
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Warehousing &amp; Distribution</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Manufacturing</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Agriculture</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Retail &amp; Grocery</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Automotive</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Food &amp; Beverage</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>E‑commerce</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Medical &amp; Pharma</span></div>
+            <div class="flex items-start gap-3"><span class="text-green-700">•</span><span>Cannabis</span></div>
+          </div>
+          <p class="text-gray-700 leading-relaxed mt-8 max-w-3xl">
+            No matter your sector, if you need reliable storage and handling solutions, we’re here to help.
+          </p>
+        </div>
+        <div class="grid gap-4">
+          <div class="w-full h-44 bg-gray-300 rounded"></div>
+          <div class="w-full h-44 bg-gray-300 rounded"></div>
+          <div class="w-full h-44 bg-gray-300 rounded"></div>
+        </div>
+      </div>
     </div>
   </section>
