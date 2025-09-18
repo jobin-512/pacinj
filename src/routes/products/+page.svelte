@@ -1,5 +1,5 @@
 <script>
-    import hero from '$lib/assets/hero.svg';
+    import hero from '$lib/assets/hero.webp';
     import Contact from '$lib/components/contact.svelte';
     import p1 from "$lib/assets/1/1.jpg"
     import p2 from "$lib/assets/2/1.jpg"

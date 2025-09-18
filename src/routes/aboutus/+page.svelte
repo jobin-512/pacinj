@@ -1,5 +1,5 @@
 <script lang="ts">
-    import hero from '$lib/assets/hero.svg';
+    import hero from '$lib/assets/hero.webp';
 </script>
 
 <section class="relative h-[80vh] bg-cover bg-center flex items-center" style="background-image: url('{hero}')">
