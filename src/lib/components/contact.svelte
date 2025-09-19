@@ -76,7 +76,7 @@
         </div>
 
         <!-- Button -->
-        <button type="submit" class="bg-red-500 text-white px-6 py-3 rounded font-semibold hover:bg-red-600 transition disabled:opacity-60" disabled={sending}>
+        <button type="submit" class="bg-[#426E32] cursor-pointer text-white px-6 py-3 rounded font-semibold hover:bg-[#35512a] transition disabled:opacity-60" disabled={sending}>
           {sending ? 'Sending…' : 'Send Message'}
         </button>
       </form>
