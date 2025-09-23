@@ -7,6 +7,13 @@
     import p4 from "$lib/assets/4/1.jpg"
     import p5 from "$lib/assets/5/1.jpg"
     import p6 from "$lib/assets/6/1.jpg"
+    import p7 from "$lib/assets/7/1.jpg"
+    import p8 from "$lib/assets/8/1.jpg"
+    import p9 from "$lib/assets/9/1.jpg"
+    import p10 from "$lib/assets/10/1.png"
+    import p11 from "$lib/assets/11/1.png"
+    import p12 from "$lib/assets/12/1.jpg"
+
 
 
     let products = [
@@ -16,12 +23,12 @@
     { id: 4, name: "Milk Crates (Divided / Non-divided)", reviews: 15, rating: 4.5, tag: "New", image: p4 ,link: "/products/4" },
     { id: 5, name: "Harvest Berry Tray", reviews: 22, rating: 5, tag: "", image: p5  ,link: "/products/5"},
     { id: 6, name: "Half Bushel Basket", reviews: 30, rating: 4.5, tag: "", image: p6 ,link: "/products/6"},
-    { id: 7, name: "Fruit/Veg. Harvesting Lugs", reviews: 18, rating: 4, tag: "", image: hero ,link: "/"},
-    { id: 8, name: "Grape Container", reviews: 20, rating: 5, tag: "New", image: hero ,link: "/"},
-    { id: 9, name: "Milk Crates", reviews: 25, rating: 4, tag: "New", image: hero ,link: "/"},
-    { id: 10, name: "Gallon Plant", reviews: 35, rating: 5, tag: "New", image: hero ,link: "/"},
-    { id: 11, name: "Recycling Box", reviews: 16, rating: 4.5, tag: "New", image: hero ,link: "/"},
-    { id: 12, name: "Wheel Chock", reviews: 10, rating: 4, tag: "New", image: hero ,link: "/"},
+    { id: 7, name: "20 lb. Agricultural Harvesting Lugs", reviews: 18, rating: 4, tag: "", image: p7 ,link: "/products/7"},
+    { id: 8, name: "30 lb. Agricultural Harvesting Lugs", reviews: 20, rating: 5, tag: "New", image: p8 ,link: "/products/8"},
+    { id: 9, name: "15 lb. Agricultural Harvesting Lugs", reviews: 25, rating: 4, tag: "New", image: p9 ,link: "/products/9"},
+    { id: 10, name: "Drying Tray", reviews: 35, rating: 5, tag: "New", image: p10 ,link: "/products/10"},
+    { id: 11, name: "Harvest Tray", reviews: 16, rating: 4.5, tag: "New", image: p11 ,link: "/products/11"},
+    { id: 12, name: "Mushroom Tray", reviews: 10, rating: 4, tag: "New", image: p12 ,link: "/products/12"},
   ];
 
   let currentPage = 1;
