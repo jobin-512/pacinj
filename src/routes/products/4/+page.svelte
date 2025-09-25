@@ -3,6 +3,8 @@
   import img2 from '$lib/assets/4/2.jpg';
   import img3 from '$lib/assets/4/3.jpg';
   import img4 from '$lib/assets/4/4.jpg';
+  import Contact from "$lib/components/contact.svelte"
+
 
   const page = {
     title: 'Milk Crates (Divided / Non-divided)',
@@ -146,3 +148,4 @@
   </div>
 </section>
 
+<Contact/>

@@ -2,6 +2,8 @@
     import img1 from '$lib/assets/6/1.jpg';
     import img2 from '$lib/assets/6/2.jpg';
     import img3 from '$lib/assets/6/3.jpg';
+    import Contact from "$lib/components/contact.svelte"
+
 
   let product = {
     title: "Harvest Berry Tray",
@@ -116,3 +118,4 @@
   </div>
 </section>
 
+<Contact/>

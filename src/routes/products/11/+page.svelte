@@ -1,4 +1,5 @@
 <script>
+    import Contact from "$lib/components/contact.svelte"
     import img1 from '$lib/assets/11/1.png';
 
   let product = {
@@ -115,3 +116,4 @@
   </div>
 </section>
 
+<Contact />

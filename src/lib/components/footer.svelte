@@ -8,12 +8,10 @@
     <!-- About Us -->
     <div>
       <img src={logo} alt="PIM Logo" class="h-14 mb-6 grayscale-100 invert" />
-      <h3 class="text-xl font-semibold mb-4">About Us</h3>
       <p class="text-base leading-relaxed">
-        Welcome to our home security camera website! Our mission is to.
       </p>
       <div class="bg-gray-200 h-28 w-full flex items-center justify-center mt-6">
-        <span class="text-[#426E32] text-3xl">📍</span>
+        <div style=""><iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=33759%20Morey%20Avenue%20Abbotsford%20British%20Columbia%20Canada%20V2S%202W5+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/">mappa della popolazione Italia</a></iframe></div>
       </div>
     </div>
 

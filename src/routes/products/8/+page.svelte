@@ -2,6 +2,8 @@
     import img1 from '$lib/assets/8/1.jpg';
     import img2 from '$lib/assets/8/2.jpg';
     import img3 from '$lib/assets/8/3.jpg';
+    import Contact from "$lib/components/contact.svelte"
+
 
   let product = {
     title: "30 lb. Agricultural Harvesting Lugs",
@@ -138,3 +140,4 @@
   </div>
 </section>
 
+<Contact />

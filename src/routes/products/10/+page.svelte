@@ -1,5 +1,7 @@
 <script>
     import img1 from '$lib/assets/10/1.png';
+    import Contact from "$lib/components/contact.svelte"
+
 
   let product = {
     title: "Stacking Tray with open handles",
@@ -109,3 +111,4 @@
   </div>
 </section>
 
+<Contact />

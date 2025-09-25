@@ -3,6 +3,7 @@
   import img2 from '$lib/assets/1/2.jpg';
   import img3 from '$lib/assets/1/3.jpg';
   import img4 from '$lib/assets/1/4.jpg';
+  import Contact from "$lib/components/contact.svelte"
 
 let product = {
   title: "Ventilated Agriculture Tote",
@@ -118,4 +119,6 @@ let product = {
   
 </div>
 </section>
+
+<Contact/>
 

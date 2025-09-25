@@ -6,6 +6,7 @@
   let sending = false;
   let success = false;
   let error = "";
+  import office from "$lib/assets/Home page/Meeting.jpg"
 
   /** @param {SubmitEvent} e */
   async function handleSubmit(e) {
@@ -85,7 +86,7 @@
     <!-- Contact Info -->
     <div class="bg-white p-8 shadow rounded-lg">
       <!-- Map Placeholder -->
-      <div class="bg-gray-200 h-36 w-full mb-6 rounded"></div>
+      <div class="bg-gray-200 h-36 w-full mb-6 rounded"><img src={office} class="size-full" alt=""></div>
 
       <!-- Office -->
       <h3 class="text-lg font-semibold mb-2">Main Office</h3>

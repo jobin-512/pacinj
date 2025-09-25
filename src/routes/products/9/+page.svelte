@@ -1,5 +1,7 @@
 <script>
     import img1 from '$lib/assets/9/1.jpg';
+    import Contact from "$lib/components/contact.svelte"
+
 
   let product = {
     title: "15 lb. Agricultural Harvesting Lugs",
@@ -115,3 +117,4 @@
   </div>
 </section>
 
+<Contact />
