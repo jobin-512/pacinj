@@ -290,13 +290,13 @@
 					<p class="text-lg md:text-xl mb-8">{slide.quote}</p>
 					<div class="flex flex-col sm:flex-row gap-4">
 						<a
-							href="/"
+							href="/contactus"
 							class="bg-[#416D30] z-10 hover:bg-white hover:text-[#416D30] hover:cursor-pointer text-white px-8 py-3 rounded-md text-center font-semibold transition-colors"
 						>
-							Find Your Local PACE Program
+							Contact Us
 						</a>
 						<a
-							href="/"
+							href="/custom-molding"
 							class="bg-white z-10 hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-md text-center font-semibold transition-colors"
 						>
 							See How It Works
