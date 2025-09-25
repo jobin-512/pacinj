@@ -1,5 +1,5 @@
 <script lang="ts">
-    import hero from '$lib/assets/hero.webp';
+    import hero from '$lib/assets/Contact us/banner.jpg';
     import Contact from '$lib/components/contact.svelte';
 </script>
 

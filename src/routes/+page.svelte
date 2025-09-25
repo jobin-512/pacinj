@@ -1,5 +1,5 @@
+
 <script lang="ts">
-    import hero from '$lib/assets/hero.webp';
     import Contact from '$lib/components/contact.svelte';
     import agriculture from '$lib/assets/agriculture.svg';
     import greenhouse from '$lib/assets/greenhouse.svg';
@@ -11,9 +11,53 @@
     import b2 from '$lib/assets/b2.svg';
     import b3 from '$lib/assets/b3.svg';
     import { fly } from "svelte/transition";
-    
+	import { onMount } from 'svelte';
+    import c1 from "$lib/assets/Home page/Meeting.jpg"
+    import c2 from "$lib/assets/Home page/Design.jpg"
+    import c3 from "$lib/assets/Home page/Prototype.jpg"
+    import c4 from "$lib/assets/Home page/Analysis.jpg"
+    import c5 from "$lib/assets/Home page/Initial-Test.jpg"
+    import c6 from "$lib/assets/Home page/Sustainability.jpg"
+    import c7 from "$lib/assets/Home page/Recycling.jpg"
+	import s1 from "$lib/assets/Home page/banner/1.jpg";
+	import s2 from "$lib/assets/Home page/banner/2.jpg";
+	import s3 from "$lib/assets/Home page/banner/3.jpg";
+	import s4 from "$lib/assets/Home page/banner/4.jpg";
+	import s5 from "$lib/assets/Home page/banner/5.jpg";
 
-  const tabs = [
+	const slides = [
+		{ image: s1, title: 'Over 55 Years of Expertise in Plastic Injection Molding', quote: 'Reliable, high-quality solutions for agriculture and industry across North America. From custom molding to CAD design, 3D printing, and prototyping — we bring your vision to life.' },
+		{ image: s2, title: 'Precision That Performs', quote: 'Engineered for demanding industries and real-world conditions' },
+		{ image: s3, title: 'From Idea To Product', quote: 'End-to-end design, tooling, and production under one roof' },
+		{ image: s4, title: 'Sustainable By Design', quote: 'Smart materials, efficient processes, and longer product life cycles' },
+		{ image: s5, title: 'Made To Fit Your Workflow', quote: 'Custom sizes, features, and finishes to match your operations' }
+	];
+
+	let currentSlide = 0;
+	let autoplayInterval: ReturnType<typeof setInterval> | undefined;
+
+	function goToSlide(index: number) {
+		currentSlide = (index + slides.length) % slides.length;
+	}
+
+	function nextHero() {
+		goToSlide(currentSlide + 1);
+	}
+
+	function prevHero() {
+		goToSlide(currentSlide - 1);
+	}
+
+	onMount(() => {
+		autoplayInterval = setInterval(() => {
+			nextHero();
+		}, 5000);
+		return () => {
+			if (autoplayInterval) clearInterval(autoplayInterval);
+		};
+	});
+
+	const tabs = [
     "Meeting",
     "Design",
     "Prototype",
@@ -21,12 +65,13 @@
     "Initial Test",
     "Sustainability",
     "Recycling"
-  ];
+	] as const;
 
-  let activeTab = "Meeting";
+	type Tab = typeof tabs[number];
+	let activeTab: Tab = "Meeting";
 
   // Example content (you can extend this for other tabs)
-  const content = {
+	const content: Record<Tab, { title: string; subtitle: string; points: string[]; image: string }> = {
     Meeting: {
       title: "Meeting – We Listen First. Always.",
       subtitle:
@@ -37,7 +82,7 @@
         "Are there weight limits, handling needs, or space constraints?",
         "Do you have industry compliance or food-grade material requirements?"
       ],
-      image:hero
+      image:c1
     },
     Design: {
       title: "Design – We Engineer With You, Not Just for You",
@@ -49,7 +94,7 @@
         "Structural integrity that holds up under pressure—literally",
         "Options for texture, finish, and reinforcement to improve grip and prevent slippage"
       ],
-      image: hero
+      image: c2
     },
     Prototype: {
       title: "Prototype – See It. Feel It. Test It.",
@@ -61,7 +106,7 @@
         "Early performance validation",
         "Cost-saving iterations"
       ],
-      image: hero
+      image: c3
     },
     Analysis: {
       title: "Analysis – We Let the Data Do the Talking",
@@ -73,7 +118,7 @@
         "Temperature and UV resistance for outdoor or cold-storage use",
         "Material compliance with regulatory requirements (especially important in food, pharma, and agriculture)"
       ],
-      image: hero
+      image: c4
     },
     "Initial Test": {
       title: "Initial Test – Real-World Trials Before Full Production",
@@ -84,7 +129,7 @@
         "Evaluate how it holds up during actual use, including stacking, storing, washing, and transport",
         "Feel 100% confident before scaling up to high-volume production"
       ],
-      image: hero
+      image: c5
     },
     Sustainability: {
       title: "Sustainability – Good for Business. Better for the Planet.",
@@ -96,7 +141,7 @@
         "Energy-efficient machines: Our injection molding equipment is optimized for reduced energy consumption",
         "Made-in-Canada production: Less shipping distance = lower carbon footprint"
       ],
-      image: hero
+      image: c6
     },
     Recycling: {
       title: "Recycling – We Close the Loop",
@@ -107,9 +152,9 @@
         "Offers closed-loop solutions for clients with high-volume needs",
         "Supports your internal ESG and sustainability goals"
       ],
-      image:hero
+      image:c7
     }
-  };
+	};
 
   const products = [
     {
@@ -227,32 +272,55 @@
   }
 </script>
 
-<section class="relative h-[80vh] bg-cover bg-center flex items-center" style="background-image: url('{hero}')">
-  <div class="absolute inset-0  bg-opacity-50"></div>
-  <div class="container mx-auto px-4">
-    <div class="max-w-2xl text-white">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">
-        Durable. Custom. Trusted.
-      </h1>
-      <p class="text-lg md:text-xl mb-8">
-        Plastic Injection Molding Solutions Built for Strength, Service & Scale
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 ">
-        <a
-          href="/"
-          class="bg-[#416D30] z-10 hover:bg-[white] hover:text-[#416D30] hover:cursor-pointer text-white px-8 py-3 rounded-md text-center font-semibold transition-colors"
-        >
-          Find Your Local PACE Program
-        </a>
-        <a
-          href="/"
-          class="bg-white z-10 hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-md text-center font-semibold transition-colors"
-        >
-          See How It Works
-        </a>
-      </div>
-    </div>
-  </div>
+<section class="relative h-[80vh] overflow-hidden">
+	{#each slides as slide, i}
+		<div
+			class="absolute inset-0 bg-cover bg-center transition-opacity duration-700"
+			style="background-image: url('{slide.image}'); opacity: {currentSlide === i ? 1 : 0};"
+			aria-hidden={currentSlide !== i}
+		>
+			<div class="absolute inset-0 bg-black/40"></div>
+			<div class="relative h-full container mx-auto px-4 flex items-center">
+				<div class="max-w-2xl text-white">
+					{#if i === 0}
+						<h1 class="text-5xl md:text-6xl font-bold mb-4">{slide.title}</h1>
+					{:else}
+						<h2 class="text-5xl md:text-6xl font-bold mb-4">{slide.title}</h2>
+					{/if}
+					<p class="text-lg md:text-xl mb-8">{slide.quote}</p>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<a
+							href="/"
+							class="bg-[#416D30] z-10 hover:bg-white hover:text-[#416D30] hover:cursor-pointer text-white px-8 py-3 rounded-md text-center font-semibold transition-colors"
+						>
+							Find Your Local PACE Program
+						</a>
+						<a
+							href="/"
+							class="bg-white z-10 hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-md text-center font-semibold transition-colors"
+						>
+							See How It Works
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	{/each}
+
+	<!-- Controls -->
+	<div class="absolute inset-x-0 bottom-6 flex items-center justify-between px-4">
+		<button aria-label="Previous" class="text-white/90 hover:text-white bg-black/30 hover:bg-black/40 rounded-full w-10 h-10 flex items-center justify-center" on:click={prevHero}>
+			<span aria-hidden="true">←</span>
+		</button>
+		<div class="flex gap-2">
+			{#each slides as _, i}
+				<button class="w-2.5 h-2.5 rounded-full transition-all {currentSlide === i ? 'bg-white w-6' : 'bg-white/60'}" aria-label={`Go to slide ${i + 1}`} on:click={() => goToSlide(i)}></button>
+			{/each}
+		</div>
+		<button aria-label="Next" class="text-white/90 hover:text-white bg-black/30 hover:bg-black/40 rounded-full w-10 h-10 flex items-center justify-center" on:click={nextHero}>
+			<span aria-hidden="true">→</span>
+		</button>
+	</div>
 </section>
 
 <section class="py-12 px-4 max-w-7xl mx-auto">
@@ -278,7 +346,7 @@
 
   <!-- Content -->
   {#if content[activeTab]}
-    <div class="grid md:grid-cols-2 gap-8 items-center">
+    <div class="grid md:grid-cols-2 gap-8 items-center md:min-h-[25rem]">
       <!-- Left -->
       <div>
         <h3 class="text-2xl font-bold mb-4">{content[activeTab].title}</h3>
@@ -302,7 +370,7 @@
         <img
           src={content[activeTab].image}
           alt={content[activeTab].title}
-          class="rounded-lg shadow-md w-full h-auto"
+          class="rounded-lg shadow-md w-full h-full"
         />
       </div>
     </div>

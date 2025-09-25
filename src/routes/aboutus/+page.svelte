@@ -1,5 +1,13 @@
 <script lang="ts">
-    import hero from '$lib/assets/hero.webp';
+    import hero from '$lib/assets/about us/banner.jpg';
+    import w1 from '$lib/assets/about us/Who-We-Are-03.jpg';
+    import w2 from '$lib/assets/about us/Who-We-Are.jpg';
+    import w3 from '$lib/assets/about us/Plastic-Totes.jpg';
+    import w4 from '$lib/assets/about us/Containers-&-Bins.jpg'
+    import w5 from '$lib/assets/about us/Lids,-Accessories-&-Custom.jpg'
+    import p from '$lib/assets/about us/our-philosophy.jpg'
+    import i from '$lib/assets/about us/Industries-We-Serve.jpg' 
+    
 </script>
 
 <section class="relative h-[80vh] bg-cover bg-center flex items-center" style="background-image: url('{hero}')">
@@ -51,9 +59,9 @@
 
           <!-- Grid of blocks -->
           <div class="grid grid-cols-2 gap-6">
-            <div class="col-span-1 row-span-2 bg-gray-300 h-[360px]"></div>
-            <div class="bg-gray-300 h-[180px]"></div>
-            <div class="bg-gray-300 h-[180px]"></div>
+            <div class="col-span-1 row-span-2  h-[360px]"><img src={w2} alt="" class="h-full"></div>
+            <div class="bg-gray-300 h-[180px]"><img src={w1} class="w-full" alt=""></div>
+            <div class="bg-gray-300 h-[180px]"><img src={w3} class="w-full" alt=""></div>
           </div>
         </div>
       </div>
@@ -70,7 +78,7 @@
 
       <div class="grid lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-xl shadow p-6 flex flex-col">
-          <div class="w-full h-40 bg-gray-200 rounded mb-4"></div>
+          <div class="w-full h-40 bg-gray-200 rounded mb-4"><img src={w3} class="h-full w-full" alt=""></div>
           <h3 class="text-lg font-semibold mb-2">Plastic Totes</h3>
           <p class="text-gray-700 text-sm mb-4">From stackable containers to custom‑sized storage units, our products are engineered for commercial, industrial, and logistics environments.</p>
           <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
@@ -80,7 +88,7 @@
           </ul>
         </div>
         <div class="bg-white rounded-xl shadow p-6 flex flex-col">
-          <div class="w-full h-40 bg-gray-200 rounded mb-4"></div>
+          <div class="w-full h-40 bg-gray-200 rounded mb-4"><img src={w4} class="h-full w-full"  alt=""></div>
           <h3 class="text-lg font-semibold mb-2">Containers &amp; Bins</h3>
           <p class="text-gray-700 text-sm mb-4">Available in multiple sizes and configurations to support a wide range of uses—from picking and kitting to bulk storage.</p>
           <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
@@ -90,7 +98,7 @@
           </ul>
         </div>
         <div class="bg-white rounded-xl shadow p-6 flex flex-col">
-          <div class="w-full h-40 bg-gray-200 rounded mb-4"></div>
+          <div class="w-full h-40 bg-gray-200 rounded mb-4"><img src={w5} class="h-full w-full" alt=""></div>
           <h3 class="text-lg font-semibold mb-2">Lids, Accessories &amp; Custom</h3>
           <p class="text-gray-700 text-sm mb-4">Secure your load and streamline storage with purpose‑built lids and accessories—or create a custom solution with our full‑service molding.</p>
           <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
@@ -131,7 +139,7 @@
           </div>
         </div>
         <div>
-          <div class="w-full h-[420px] bg-gray-300 rounded"></div>
+          <div class="w-full h-[420px] bg-gray-300 rounded"><img src={p} class="h-full w-full" alt=""></div>
         </div>
       </div>
     </div>
@@ -163,9 +171,7 @@
           </p>
         </div>
         <div class="grid gap-4">
-          <div class="w-full h-44 bg-gray-300 rounded"></div>
-          <div class="w-full h-44 bg-gray-300 rounded"></div>
-          <div class="w-full h-44 bg-gray-300 rounded"></div>
+          <div class="w-full h-44 bg-gray-300 rounded"><img src={i} class="h-full w-full" alt=""></div>
         </div>
       </div>
     </div>

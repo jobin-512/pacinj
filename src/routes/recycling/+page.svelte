@@ -1,5 +1,10 @@
 <script lang="ts">
-    import hero from '$lib/assets/hero.webp';
+    import hero from '$lib/assets/recycling/1.jpg';
+    import i2 from '$lib/assets/recycling/2.jpg';
+    import i3 from '$lib/assets/recycling/3.jpg';
+    import i4 from '$lib/assets/recycling/4.jpg';
+    import i5 from '$lib/assets/recycling/5.jpg';
+
 </script>
 
 <section class="relative h-[80vh] bg-cover bg-center flex items-center" style="background-image: url('{hero}')">
@@ -19,13 +24,7 @@
             <!-- Silhouette Graphic -->
             <div class="lg:col-span-1">
                 <div class="w-full h-96 bg-gray-800 rounded-lg flex items-end justify-center">
-                    <!-- Two people silhouette -->
-                    <div class="flex items-end space-x-2 mb-8">
-                        <div class="w-16 h-32 bg-gray-700 rounded-t-full"></div>
-                        <div class="w-16 h-36 bg-gray-700 rounded-t-full relative">
-                            <div class="absolute -left-2 top-8 w-8 h-16 bg-gray-700 rounded-full"></div>
-                        </div>
-                    </div>
+                    <img src={i2} alt="">
                 </div>
             </div>
             
@@ -155,7 +154,7 @@
         <div class="grid md:grid-cols-2 gap-10 items-end">
             <!-- Card 1 -->
             <div class="rounded-xl overflow-hidden shadow-md">
-                <div class="h-72 bg-gray-600"></div>
+                <div class="h-72 bg-gray-600"><img src={i2} class="size-full" alt=""></div>
                 <div class="bg-white mx-4 -mt-10 relative z-10 rounded-xl shadow p-6">
                     <h3 class="text-[#426E32] font-semibold text-lg mb-2">Residential Waste Collection</h3>
                     <p class="text-gray-600 text-sm">
@@ -167,7 +166,7 @@
 
             <!-- Card 2 -->
             <div class="rounded-xl overflow-hidden shadow-md">
-                <div class="h-72 bg-gray-600"></div>
+                <div class="h-72 bg-gray-600"><img src={i4} class="size-full" alt=""></div>
                 <div class="bg-white mx-4 -mt-10 relative z-10 rounded-xl shadow p-6">
                     <h3 class="text-[#426E32] font-semibold text-lg mb-2">Commercial Dumpster Rental & Collection</h3>
                     <p class="text-gray-600 text-sm">
@@ -191,7 +190,7 @@
         <div class="grid lg:grid-cols-2 gap-10 items-center">
             <!-- Left image with overlay stat card -->
             <div class="relative">
-                <div class="h-80 md:h-96 bg-gray-600 rounded-xl"></div>
+                <div class="h-80 md:h-96 bg-gray-600 rounded-xl"><img src={i5} class="size-full" alt=""></div>
                 <div class="absolute -bottom-6 left-8 bg-white rounded-xl shadow-md px-8 py-6">
                     <div class="flex items-end space-x-2">
                         <span class="text-5xl font-bold text-[#426E32]">50</span>

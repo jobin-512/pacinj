@@ -1,5 +1,21 @@
 <script lang="ts">
-  import hero from '$lib/assets/hero.webp';
+  import hero from '$lib/assets/custom-molding/1.jpg';
+  import s1 from '$lib/assets/custom-molding/Meeting.jpg';
+  import s2 from '$lib/assets/custom-molding/Design.jpg';
+  import s3 from '$lib/assets/custom-molding/Prototype .jpg';
+  import s4 from '$lib/assets/custom-molding/Analysis.jpg';
+  import s5 from '$lib/assets/custom-molding/Initial Test.jpg';
+  import s6 from '$lib/assets/custom-molding/Sustainability .jpg';
+  import s7 from '$lib/assets/custom-molding/Recycling .jpg';
+  import one from '$lib/assets/custom-molding/One-Process.-Endless-Possibilities.jpg';
+  import w1 from '$lib/assets/custom-molding/Built-to-Perform..jpg';
+  import w2 from '$lib/assets/custom-molding/Designed-for-Your-Workflow..jpg';
+  import w3 from '$lib/assets/custom-molding/Industry-Tested.-Customer-Trusted..jpg';
+  import w4 from '$lib/assets/custom-molding/Made-in-Canada.-Distributed-Across-America-and-Mexico..jpg';
+  import w5 from '$lib/assets/custom-molding/Service-That-Sticks..jpg';
+  import w6 from '$lib/assets/custom-molding/Who-We-Serve.png';
+
+
 </script>
 
 <!-- Hero section -->
@@ -130,14 +146,14 @@
         <p class="text-sm text-gray-700 mt-4">This is not a transaction—it’s a partnership. Our goal? Co‑create a solution that works in your real‑world environment, not just in a brochure.</p>
       </div>
       <div>
-        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"></div>
+        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"><img src={s1} class="h-full w-full" alt=""></div>
       </div>
     </div>
 
     <!-- Step 2 -->
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <div class="order-2 md:order-1">
-        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"></div>
+        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"><img src={s2} class="h-full w-full" alt=""></div>
       </div>
       <div class="order-1 md:order-2">
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Step 2: Design — We Engineer With You, Not Just For You</h3>
@@ -172,14 +188,14 @@
         <p class="text-sm text-gray-700 mt-4">This stage is collaborative and crucial. You’re not just approving a drawing—you’re experiencing your product.</p>
       </div>
       <div>
-        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"></div>
+        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"><img src={s3} class="h-full w-full" alt=""></div>
       </div>
     </div>
 
     <!-- Step 4 -->
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <div class="order-2 md:order-1">
-        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"></div>
+        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"><img src={s4} class="h-full w-full" alt=""></div>
       </div>
       <div class="order-1 md:order-2">
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Step 4: Analysis — Let the Data Do the Talking</h3>
@@ -214,14 +230,14 @@
         <p class="text-sm text-gray-700 mt-4">This step is the final safeguard. It ensures the solution not only meets our standards—but works seamlessly in your workflow.</p>
       </div>
       <div>
-        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"></div>
+        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"><img src={s5} class="h-full w-full" alt=""></div>
       </div>
     </div>
 
     <!-- Step 6 -->
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <div class="order-2 md:order-1">
-        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"></div>
+        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"><img src={s6} class="h-full w-full" alt=""></div>
       </div>
       <div class="order-1 md:order-2">
         <h3 class="text-2xl md:text-3xl font-bold mb-4">Step 6: Sustainability — Designed to Last. Built to Recycle.</h3>
@@ -254,7 +270,7 @@
         <p class="text-sm text-gray-700 mt-4">We’re proud to offer a full‑circle solution—from design to disposal—and to help our clients do the same.</p>
       </div>
       <div>
-        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"></div>
+        <div class="w-full h-64 md:h-72 bg-gray-200 rounded"><img src={s7} class="h-full w-full" alt=""></div>
       </div>
     </div>
   </div>
@@ -278,7 +294,7 @@
       </div>
       <div>
         <div class="w-full h-72 bg-white rounded-xl shadow flex items-center justify-center">
-          <div class="w-5/6 h-5/6 bg-gray-200 rounded"></div>
+          <div class="w-5/6 h-5/6 bg-gray-200 rounded"><img src={one} class="h-full w-full" alt=""></div>
         </div>
       </div>
     </div>
@@ -290,17 +306,17 @@
         <div class="bg-white rounded-xl shadow p-6">
           <h4 class="font-semibold text-lg mb-2">Built to Perform.</h4>
           <p class="text-gray-700 text-sm">Our containers are engineered to survive the harshest environments—over and over again. Think heavy loads, extreme temps, constant handling, and years of wear.</p>
-          <div class="mt-4 w-full h-32 bg-gray-200 rounded"></div>
+          <div class="mt-4 w-full h-32 bg-gray-200 rounded"><img src={w1} class="h-full w-full" alt=""></div>
         </div>
         <div class="bg-white rounded-xl shadow p-6">
           <h4 class="font-semibold text-lg mb-2">Designed for Your Workflow.</h4>
           <p class="text-gray-700 text-sm">We design for your specs, not ours. From size and shape to features like interlocking bases and drain holes—we build to fit your processes perfectly.</p>
-          <div class="mt-4 w-full h-32 bg-gray-200 rounded"></div>
+          <div class="mt-4 w-full h-32 bg-gray-200 rounded"><img src={w2} class="h-full w-full" alt=""></div>
         </div>
         <div class="bg-white rounded-xl shadow p-6">
           <h4 class="font-semibold text-lg mb-2">Industry-Tested. Customer-Trusted.</h4>
           <p class="text-gray-700 text-sm">From logistics and food processing to warehousing and agriculture, we’ve served hundreds of clients across North America—and they keep coming back.</p>
-          <div class="mt-4 w-full h-32 bg-gray-200 rounded"></div>
+          <div class="mt-4 w-full h-32 bg-gray-200 rounded"><img src={w3} class="h-full w-full" alt=""></div>
         </div>
       </div>
     </div>
@@ -310,12 +326,12 @@
       <div class="bg-white rounded-xl shadow p-6">
         <h4 class="font-semibold text-lg mb-2">Made in Canada. Distributed Across America and Mexico.</h4>
         <p class="text-gray-700 text-sm">With a full-service manufacturing facility in Canada and partnerships across the U.S., Canada, and Mexico, we’re proud to deliver local service with continental scale.</p>
-        <div class="mt-4 w-full h-40 bg-gray-200 rounded"></div>
+        <div class="mt-4 w-full h-40 bg-gray-200 rounded"><img src={w4} class="w-full h-full" alt=""></div>
       </div>
       <div class="bg-white rounded-xl shadow p-6">
         <h4 class="font-semibold text-lg mb-2">Service That Sticks.</h4>
         <p class="text-gray-700 text-sm">We’re not just here to ship containers—we’re here to solve problems. Our customer service team is ranked #1 for a reason: we’re fast, responsive, and always ready to help.</p>
-        <div class="mt-4 w-full h-40 bg-gray-200 rounded"></div>
+        <div class="mt-4 w-full h-40 bg-gray-200 rounded"><img src={w5} class="size-full" alt=""></div>
       </div>
     </div>
 
@@ -330,11 +346,8 @@
           <li><b>Cold Storage</b> – Temperature-stable materials that perform in freezer environments</li>
           <li><b>Food &amp; Beverage</b> – Containers designed for hygiene, cleaning, and regulatory compliance</li>
         </ul>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="w-full h-36 bg-gray-200 rounded"></div>
-          <div class="w-full h-36 bg-gray-200 rounded"></div>
-          <div class="w-full h-36 bg-gray-200 rounded"></div>
-          <div class="w-full h-36 bg-gray-200 rounded"></div>
+        <div class="grid sm:grid-cols-1 gap-4">
+          <div class="w-full h-76 bg-gray-200 rounded"><img src={w6} class="size-full" alt=""></div>
         </div>
       </div>
       <p class="mt-6 text-gray-900 font-semibold">No matter your industry, if you need custom-molded containers—PIM delivers.</p>
