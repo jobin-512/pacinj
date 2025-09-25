@@ -26,9 +26,9 @@
     { id: 7, name: "20 lb. Agricultural Harvesting Lugs", reviews: 18, rating: 4, tag: "", image: p7 ,link: "/products/7"},
     { id: 8, name: "30 lb. Agricultural Harvesting Lugs", reviews: 20, rating: 5, tag: "New", image: p8 ,link: "/products/8"},
     { id: 9, name: "15 lb. Agricultural Harvesting Lugs", reviews: 25, rating: 4, tag: "New", image: p9 ,link: "/products/9"},
-    { id: 10, name: "Drying Tray", reviews: 35, rating: 5, tag: "New", image: p10 ,link: "/products/10"},
+    { id: 10, name: "Stacking Tray with open handles", reviews: 35, rating: 5, tag: "New", image: p10 ,link: "/products/10"},
     { id: 11, name: "Harvest Tray", reviews: 16, rating: 4.5, tag: "New", image: p11 ,link: "/products/11"},
-    { id: 12, name: "Mushroom Tray", reviews: 10, rating: 4, tag: "New", image: p12 ,link: "/products/12"},
+    { id: 12, name: "Non Divided Berry Tray", reviews: 10, rating: 4, tag: "New", image: p12 ,link: "/products/12"},
   ];
 
   let currentPage = 1;

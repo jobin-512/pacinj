@@ -2,7 +2,7 @@
     import img1 from '$lib/assets/12/1.jpg';
 
   let product = {
-    title: "Mushroom Tray",
+    title: "Non Divided Berry Tray",
     images: [
       img1,
     ],
