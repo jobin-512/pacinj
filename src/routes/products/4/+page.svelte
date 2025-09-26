@@ -5,6 +5,18 @@
   import img4 from '$lib/assets/4/4.jpg';
   import Contact from "$lib/components/contact.svelte"
 
+let selectedImage = null;
+let showModal = false;
+
+function openImageModal(imageSrc) {
+  selectedImage = imageSrc;
+  showModal = true;
+}
+
+function closeImageModal() {
+  showModal = false;
+  selectedImage = null;
+}
 
   const page = {
     title: 'Milk Crates (Divided / Non-divided)',
@@ -94,7 +106,15 @@
   <!-- Overview panel -->
   <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-8">
     <div class="md:col-span-5">
-      <img src={img1} alt="Milk crates" class="rounded-xl shadow-md w-full" />
+      <button 
+        type="button"
+        class="rounded-xl shadow-md w-full cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500"
+        on:click={() => openImageModal(img1)}
+        on:keydown={(e) => e.key === 'Enter' && openImageModal(img1)}
+        aria-label="View enlarged milk crates image"
+      >
+        <img src={img1} alt="Milk crates" class="rounded-xl w-full" />
+      </button>
     </div>
     <div class="md:col-span-7 bg-gray-100 rounded-lg p-4">
       <h3 class="font-semibold mb-2">Features:</h3>
@@ -117,7 +137,15 @@
     {#each variants as v}
       <div class="bg-white rounded-xl shadow p-4 flex flex-col">
         <h3 class="font-semibold text-lg mb-3">{v.name}</h3>
-        <img src={v.image} alt={v.name} class="rounded-lg w-full h-[25rem] object-cover mb-3" />
+        <button 
+          type="button"
+          class="rounded-lg w-full h-[25rem] cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
+          on:click={() => openImageModal(v.image)}
+          on:keydown={(e) => e.key === 'Enter' && openImageModal(v.image)}
+          aria-label="View enlarged {v.name} image"
+        >
+          <img src={v.image} alt={v.name} class="rounded-lg w-full h-[25rem] object-cover" />
+        </button>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-auto">
           <div>
             <h4 class="font-semibold mb-1">Specifications:</h4>
@@ -147,5 +175,31 @@
     {/each}
   </div>
 </section>
+
+<!-- Image Modal -->
+{#if showModal}
+  <div 
+    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+    on:click={closeImageModal}
+    on:keydown={(e) => e.key === 'Escape' && closeImageModal()}
+    role="button"
+    tabindex="0"
+  >
+    <div class="relative max-w-4xl max-h-full">
+      <img 
+        src={selectedImage} 
+        alt="" 
+        class="max-w-full max-h-full object-contain rounded-lg"
+      />
+      <button 
+        class="absolute top-4 right-4 text-white text-2xl font-bold bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+        on:click={closeImageModal}
+        aria-label="Close enlarged image"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+{/if}
 
 <Contact/>

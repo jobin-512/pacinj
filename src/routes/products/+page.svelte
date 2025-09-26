@@ -2,11 +2,11 @@
     import hero from '$lib/assets/hero.webp';
     import Contact from '$lib/components/contact.svelte';
     import p1 from "$lib/assets/1/1.jpg"
-    import p2 from "$lib/assets/2/1.jpg"
+    import p2 from "$lib/assets/2/2.jpg"
     import p3 from "$lib/assets/3/1.jpg"
     import p4 from "$lib/assets/4/1.jpg"
-    import p5 from "$lib/assets/5/1.jpg"
-    import p6 from "$lib/assets/6/1.jpg"
+    import p5 from "$lib/assets/5/3.jpg"
+    import p6 from "$lib/assets/6/2.jpg"
     import p7 from "$lib/assets/7/1.jpg"
     import p8 from "$lib/assets/8/1.jpg"
     import p9 from "$lib/assets/9/1.jpg"
@@ -68,7 +68,7 @@
           </span>
         {/if}
 
-        <img src={product.image} alt={product.name} class="w-full h-[25rem] object-cover" />
+        <a href={product.link}><img src={product.image} alt={product.name} class="w-full h-[25rem] object-cover" /></a>
 
         <div class="p-4 space-y-2">
           <h3 class="text-lg font-medium">{product.name}</h3>

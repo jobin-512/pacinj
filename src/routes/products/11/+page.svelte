@@ -2,6 +2,19 @@
     import Contact from "$lib/components/contact.svelte"
     import img1 from '$lib/assets/11/1.png';
 
+let selectedImage = null;
+let showModal = false;
+
+function openImageModal(imageSrc) {
+  selectedImage = imageSrc;
+  showModal = true;
+}
+
+function closeImageModal() {
+  showModal = false;
+  selectedImage = null;
+}
+
   let product = {
     title: "Harvest Tray",
     images: [
@@ -47,10 +60,34 @@
     <!-- LEFT: Product Info -->
 
     <div class="w-full md:w-1/2 flex flex-col gap-4">
-      <img src={product.images[0]} alt="Product large" class="rounded-xl shadow-md w-full" />
+      <button 
+        type="button"
+        class="rounded-xl shadow-md w-full cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500"
+        on:click={() => openImageModal(product.images[0])}
+        on:keydown={(e) => e.key === 'Enter' && openImageModal(product.images[0])}
+        aria-label="View enlarged product image"
+      >
+        <img 
+          src={product.images[0]} 
+          alt="Product large" 
+          class="rounded-xl w-full" 
+        />
+      </button>
       <div class="grid grid-cols-3 gap-4">
         {#each product.images.slice(1) as img}
-          <img src={img} alt="Product thumbnail" class="rounded-lg shadow w-full h-full object-cover" />
+          <button 
+            type="button"
+            class="rounded-lg shadow w-full h-full cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500"
+            on:click={() => openImageModal(img)}
+            on:keydown={(e) => e.key === 'Enter' && openImageModal(img)}
+            aria-label="View enlarged product thumbnail"
+          >
+            <img 
+              src={img} 
+              alt="Product thumbnail" 
+              class="rounded-lg w-full h-full object-cover" 
+            />
+          </button>
         {/each}
       </div>
     </div>
@@ -115,5 +152,31 @@
     
   </div>
 </section>
+
+<!-- Image Modal -->
+{#if showModal}
+  <div 
+    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+    on:click={closeImageModal}
+    on:keydown={(e) => e.key === 'Escape' && closeImageModal()}
+    role="button"
+    tabindex="0"
+  >
+    <div class="relative max-w-4xl max-h-full">
+      <img 
+        src={selectedImage} 
+        alt="" 
+        class="max-w-full max-h-full object-contain rounded-lg"
+      />
+      <button 
+        class="absolute top-4 right-4 text-white text-2xl font-bold bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+        on:click={closeImageModal}
+        aria-label="Close enlarged image"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+{/if}
 
 <Contact />
