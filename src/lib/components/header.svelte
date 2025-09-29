@@ -54,7 +54,7 @@
   </div>
 
   <!-- Main header -->
-  <div class="bg-[#ffffff70] shadow-md">
+  <div class="bg-[#ffffff] shadow-md">
     <div class="container mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
         <!-- Logo -->

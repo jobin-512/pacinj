@@ -7,16 +7,16 @@
     import automated from '$lib/assets/automated.svg';
     import custom from '$lib/assets/custom.svg';
     import industrial from '$lib/assets/industrial.svg';
-    import b1 from '$lib/assets/b1.svg';
-    import b2 from '$lib/assets/b2.svg';
+    import b1 from '$lib/assets/b1.webp';
+    import b2 from '$lib/assets/b2.webp';
     import b3 from '$lib/assets/b3.svg';
     import { fly } from "svelte/transition";
 	import { onMount } from 'svelte';
     import c1 from "$lib/assets/Home page/Meeting.jpg"
     import c2 from "$lib/assets/Home page/Design.jpg"
-    import c3 from "$lib/assets/Home page/Prototype.jpg"
+    import c3 from "$lib/assets/Home page/Prototype.png"
     import c4 from "$lib/assets/Home page/Analysis.jpg"
-    import c5 from "$lib/assets/Home page/Initial-Test.jpg"
+    import c5 from "$lib/assets/Home page/Initial Test.png"
     import c6 from "$lib/assets/Home page/Sustainability.jpg"
     import c7 from "$lib/assets/Home page/Recycling.jpg"
 	import s1 from "$lib/assets/Home page/banner/1.jpg";
@@ -85,14 +85,14 @@
       image:c1
     },
     Design: {
-      title: "Design – We Engineer With You, Not Just for You",
+      title: "Design – Turning Your Ideas Into Real-World Solutions",
       subtitle:
-        "Once we’ve collected your inputs, our design team translates that into an intelligent, manufacturable solution. Here’s what you can expect:",
+        "We don’t just design products—we design possibilities. By working closely with you, our team transforms your vision into intelligent, manufacturable solutions tailored to your needs. Here’s what sets us apart:",
       points: [
-        "Custom-fit CAD modeling that takes your specs and operational realities into account",
-        "Function-first design, incorporating handles, lids, stacking capabilities, drainage holes, or label slots as needed",
-        "Structural integrity that holds up under pressure—literally",
-        "Options for texture, finish, and reinforcement to improve grip and prevent slippage"
+        "Custom-fit CAD modeling that aligns with your unique specifications and business objectives",
+        "Infinite design flexibility—from functionality to aesthetics, we adapt to whatever your solution requires",
+        "Engineered durability and performance, ensuring every design thrives under real-world demands",
+        "Tailored textures, finishes, and reinforcements that enhance usability, brand appeal, and long-term reliability"
       ],
       image: c2
     },
@@ -201,20 +201,20 @@
 
   const items = [
     {
-      title: "CAPABILITIES",
+      title: "Injection Molding Machine capabilities ",
       lines: ["- 20 TON", "- 2000 TON"],
       img: b1,
       link:"#"
     },
     {
-      title: "HOT STAMPING",
-      lines: ["LASER", "PRINTING"],
+      title: "Click Here To Learn About",
+      lines: ["Hot stamping", "Laser printing"],
       img: b2,
       link:"#"
     },
     {
-      title: "CHOICE OF COLOUR",
-      lines: ["RECYCLING"],
+      title: "See our color options",
+      lines: [""],
       img: b3,
       link:"#"
     }
@@ -421,6 +421,7 @@
 
 
 <section class="w-full ">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-10"> PIM offers</h2>
   <div class="grid md:grid-cols-3 grid-cols-1 ">
     {#each items as item}
       <a href={item.link}
