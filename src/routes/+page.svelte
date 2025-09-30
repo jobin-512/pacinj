@@ -7,6 +7,14 @@
     import automated from '$lib/assets/automated.svg';
     import custom from '$lib/assets/custom.svg';
     import industrial from '$lib/assets/industrial.svg';
+    import p1 from "$lib/assets/1/1.jpg"
+    import p2 from "$lib/assets/2/1.jpg"
+    import p3 from "$lib/assets/3/1.jpg"
+    import p4 from "$lib/assets/4/1.jpg"
+    import p5 from "$lib/assets/5/1.jpg"
+    import p6 from "$lib/assets/6/1.jpg"
+    import p7 from "$lib/assets/7/1.jpg"
+    import p8 from "$lib/assets/8/1.jpg"
     import b1 from '$lib/assets/b1.webp';
     import b2 from '$lib/assets/b2.webp';
     import b3 from '$lib/assets/b3.svg';
@@ -158,44 +166,52 @@
 
   const products = [
     {
-      name: "Agricultural",
-      desc: "Durable injection-molded containers built for agriculture and farming applications.",
-      img: agriculture
+      name: "Small Ventilated Agriculture Tote",
+      desc: "This Ventilated Agriculture Tote is commonly used in harvesting produce.",
+      img: p1,
+      link:"/products/1"
     },
     {
-      name: "Green House",
-      desc: "Specialized trays and bins designed for greenhouse environments.",
-      img: greenhouse
+      name: "Ventilated Agriculture Tote",
+      desc: "This Ventilated Agriculture Tote is commonly used in harvesting produce.",
+      img: p2,
+      link:"/products/2"
     },
     {
-      name: "STACK ING ONLY",
-      desc: "Heavy-duty crates designed exclusively for stacking efficiency.",
-      img: stacking
+      name: "Ventilated Agriculture Tote",
+      desc: "This Ventilated Agriculture Tote is commonly used in harvesting produce.",
+      img: p3,
+      link:"/products/3"
     },
     {
-      name: "STACKING & NESTING",
-      desc: "Versatile bins that can be stacked or nested for flexible storage.",
-      img: stacking
+      name: "Milk Crates (Divided / Non-divided)",
+      desc: "Versatile Crates that can be stacked or nested for flexible storage.",
+      img: p4,
+      link:"/products/4"
     },
     {
-      name: "Automated Sorting Trays",
-      desc: "Reliable trays tailored for automated systems and conveyor belts.",
-      img: automated
+      name: "Harvest Berry Tray",
+      desc: "Used for drying raspberries, blackberries, blueberries, and strawberries, as well as other smaller fruits and vegetables.",
+      img: p5,
+      link:"/products/5"
     },
     {
-      name: "Custom",
-      desc: "Custom-molded containers tailored to your specifications.",
-      img: custom
+      name: "Harvest Berry Tray",
+      desc: "Used for drying raspberries, blackberries, blueberries, and strawberries, as well as other smaller fruits and vegetables.",
+      img: p6,
+      link:"/products/6"
     },
     {
-      name: "Industrial",
-      desc: "Strong and durable containers engineered for industrial use.",
-      img: industrial
+      name: "20 lb. Agricultural Harvesting Lugs",
+      desc: "Used in the harvesting, storage, and processing of asparagus, beans, blueberries, cherries, figs, grapes, mushrooms, and other small to midsize fruits and vegetables.",
+      img: p7,
+      link:"/products/7"
     },
     {
-      name: "Industrial",
-      desc: "Standardized industrial trays for heavy-duty applications.",
-      img: industrial
+      name: "30 lb. Agricultural Harvesting Lugs",
+      desc: "Used in the harvesting, storage, and processing of asparagus, beans, blueberries, cherries, figs, grapes, mushrooms, and other small to midsize fruits and vegetables.",
+      img: p8,
+      link:"/products/8"
     }
   ];
 
@@ -408,11 +424,11 @@
         >
           <h3 class="text-xl font-semibold mb-2">{product.name}</h3>
           <p class="text-sm mb-4 px-3">{product.desc}</p>
-          <button
+          <a href={product.link}
             class="px-4 py-2 border border-white hover:bg-white hover:text-green-700 transition"
           >
             DETAILS
-          </button>
+      </a>
         </div>
       </div>
     {/each}
