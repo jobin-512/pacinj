@@ -8,16 +8,16 @@
     import custom from '$lib/assets/custom.svg';
     import industrial from '$lib/assets/industrial.svg';
     import p1 from "$lib/assets/1/1.jpg"
-    import p2 from "$lib/assets/2/1.jpg"
+    import p2 from "$lib/assets/12/1.jpg"
     import p3 from "$lib/assets/3/1.jpg"
     import p4 from "$lib/assets/4/1.jpg"
-    import p5 from "$lib/assets/5/1.jpg"
-    import p6 from "$lib/assets/6/1.jpg"
-    import p7 from "$lib/assets/7/1.jpg"
+    import p5 from "$lib/assets/17/1.jpg"
+    import p6 from "$lib/assets/10/1.png"
+    import p7 from "$lib/assets/8/1.jpg"
     import p8 from "$lib/assets/8/1.jpg"
     import b1 from '$lib/assets/b1.webp';
     import b2 from '$lib/assets/b2.webp';
-    import b3 from '$lib/assets/b3.svg';
+    import b3 from '$lib/assets/b3.png';
     import { fly } from "svelte/transition";
 	import { onMount } from 'svelte';
     import c1 from "$lib/assets/Home page/Meeting.jpg"
@@ -55,6 +55,15 @@
 	function prevHero() {
 		goToSlide(currentSlide - 1);
 	}
+
+	onMount(() => {
+		autoplayInterval = setInterval(() => {
+			nextHero();
+		}, 5000);
+		return () => {
+			if (autoplayInterval) clearInterval(autoplayInterval);
+		};
+	});
 
 	onMount(() => {
 		autoplayInterval = setInterval(() => {
@@ -166,53 +175,41 @@
 
   const products = [
     {
-      name: "Small Ventilated Agriculture Tote",
-      desc: "This Ventilated Agriculture Tote is commonly used in harvesting produce.",
-      img: p1,
-      link:"/products/1"
-    },
-    {
-      name: "Ventilated Agriculture Tote",
-      desc: "This Ventilated Agriculture Tote is commonly used in harvesting produce.",
-      img: p2,
-      link:"/products/2"
-    },
-    {
-      name: "Ventilated Agriculture Tote",
-      desc: "This Ventilated Agriculture Tote is commonly used in harvesting produce.",
-      img: p3,
-      link:"/products/3"
-    },
-    {
-      name: "Milk Crates (Divided / Non-divided)",
-      desc: "Versatile Crates that can be stacked or nested for flexible storage.",
-      img: p4,
-      link:"/products/4"
-    },
-    {
-      name: "Harvest Berry Tray",
-      desc: "Used for drying raspberries, blackberries, blueberries, and strawberries, as well as other smaller fruits and vegetables.",
-      img: p5,
-      link:"/products/5"
-    },
-    {
-      name: "Harvest Berry Tray",
-      desc: "Used for drying raspberries, blackberries, blueberries, and strawberries, as well as other smaller fruits and vegetables.",
-      img: p6,
-      link:"/products/6"
-    },
-    {
-      name: "20 lb. Agricultural Harvesting Lugs",
-      desc: "Used in the harvesting, storage, and processing of asparagus, beans, blueberries, cherries, figs, grapes, mushrooms, and other small to midsize fruits and vegetables.",
+      name: "agricultural harvesting lugs",
+      desc: "This Ventilated Agriculture Lugs is commonly used in harvesting produce.",
       img: p7,
-      link:"/products/7"
+      link:"/categories/agricultural-harvesting-lugs"
     },
     {
-      name: "30 lb. Agricultural Harvesting Lugs",
-      desc: "Used in the harvesting, storage, and processing of asparagus, beans, blueberries, cherries, figs, grapes, mushrooms, and other small to midsize fruits and vegetables.",
-      img: p8,
-      link:"/products/8"
-    }
+      name: "Drying screen/ Small Tray",
+      desc: "This Drying screen/ Small Tray is commonly used in harvesting produce.",
+      img: p6,
+      link:"/categories/drying-screen"
+    },
+    {
+      name: "Berry Tray",
+      desc: "Used for drying raspberries, blackberries, blueberries, and strawberries, as well as other smaller fruits and vegetables.",
+      img: p2,
+      link:"/categories/berry-tray"
+    },
+    {
+      name: "Large Bins",
+      desc: "Versatile Bins that can be stacked or nested for flexible storage.",
+      img: p1,
+      link:"/categories/large-bins"
+    },
+    {
+      name: "Milk Crates",
+      desc: "Milk Crates are used for storing and transporting milk.",
+      img: p4,
+      link:"/categories/milk-crates"
+    },
+    {
+      name: "Assorted products",
+      desc: "Assorted products are used for storing and transporting various products.",
+      img: p5,
+      link:"/categories/assorted-products"
+    },
   ];
 
   const items = [
@@ -287,7 +284,6 @@
     startIndex = (startIndex + 1) % testimonials.length;
   }
 </script>
-
 <section class="relative h-[80vh] overflow-hidden">
 	{#each slides as slide, i}
 		<div
@@ -393,16 +389,15 @@
   {/if}
 </section>
 
-
 <section class="py-12 px-4 max-w-7xl mx-auto">
-  <p class="text-sm text-center text-gray-500 mb-2">Our Product</p>
+  <p class="text-sm text-center text-gray-500 mb-2">Our Categories</p>
   <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">
     <span class="text-green-700">Pacific Injection Molding</span> LTD specializes in plastic <br />
     injected molded totes and containers.
   </h2>
 
   <!-- Product Grid -->
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
     {#each products as product}
       <div class="relative group rounded-lg overflow-hidden shadow hover:shadow-lg transition">
         <!-- Image -->
@@ -436,30 +431,37 @@
 </section>
 
 
-<section class="w-full ">
+<section class="w-full py-12 px-4 max-w-7xl mx-auto">
   <h2 class="text-2xl md:text-3xl font-bold text-center mb-10"> PIM offers</h2>
-  <div class="grid md:grid-cols-3 grid-cols-1 ">
+  <div class="grid md:grid-cols-3 grid-cols-1 gap-4 md:gap-6">
     {#each items as item}
       <a href={item.link}
-        class="relative group h-[300px] md:h-[400px] overflow-hidden  hover:scale-110 hover:duration-300 duration-300"
+        class="relative group block rounded-xl overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[#426E32] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+        aria-label={item.title}
       >
         <!-- Background Image -->
-        <img
-          src={item.img}
-          alt={item.title}
-          class="w-full h-full object-cover"
-        />
+        <div class="h-[300px] md:h-[400px]">
+          <img
+            src={item.img}
+            alt={item.title}
+            class="w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+        </div>
 
-        <!-- Dark base overlay -->
-        <div class="absolute inset-0 bg-opacity-40"></div>
+        <!-- Base overlay -->
+        <div class="pointer-events-none absolute inset-0 bg-black/40 transition-opacity duration-300"></div>
+        <!-- Bottom gradient for readability -->
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent opacity-90"></div>
 
         <!-- Text -->
         <div
-          class="absolute inset-0 flex flex-col items-center justify-center text-white text-center font-bold text-2xl md:text-3xl transition duration-300"
+          class="absolute inset-0 flex flex-col items-center justify-center text-white text-center font-bold text-2xl md:text-3xl transition-opacity duration-300"
         >
-          <h3>{item.title}</h3>
+          <h3 class="drop-shadow-lg px-4">{item.title}</h3>
           {#each item.lines as line}
-            <p class="mt-2">{line}</p>
+            {#if line}
+              <p class="mt-2 text-base md:text-lg font-medium drop-shadow px-4">{line}</p>
+            {/if}
           {/each}
         </div>
       </a>

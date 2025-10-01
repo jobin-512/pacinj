@@ -1,12 +1,13 @@
 <script>
-    import img1 from '$lib/assets/6/1.jpg';
-    import img2 from '$lib/assets/6/2.jpg';
-    import img3 from '$lib/assets/6/3.jpg';
+    import img1 from '$lib/assets/13/1.jpg';
+    import img2 from '$lib/assets/13/2.jpg';
     import Contact from "$lib/components/contact.svelte"
 
+/** @type {string | null} */
 let selectedImage = null;
 let showModal = false;
 
+/** @param {string} imageSrc */
 function openImageModal(imageSrc) {
   selectedImage = imageSrc;
   showModal = true;
@@ -18,35 +19,37 @@ function closeImageModal() {
 }
 
   let product = {
-    title: "Half Bushel Basket",
-    images: [
-      img1,
-      img2,
-      img3,
-    ],
-    icons: [
-      { name: "Slot Ventilation", icon: "🪟" },
-      { name: "Stackable", icon: "📦" },
-      { name: "We Recycle", icon: "♻️" }
-    ],
-    colors: ["#d1ecf1", "#d2b48c", "#000000"],
-    description: `Used for drying raspberries, blackberries, blueberries, and strawberries, as well as other smaller fruits and vegetables.`,
-    features: [
-      "3mm ventilation holes",
-      "Designed to fit in standard / bakery racks",
-      "Food grade safe certified",
-      "Freezer safe"
-    ],
-    dimensions: [
-      "25.5”L x 18”W",
-      "Weight: 1.7 lb"
-    ],
-    shipping: [
-      "10 trays per box",
-      "29 boxes per pallet",
-      "30 pallets per truckload"
-    ]
-  };
+  title: "20 lb. Harvesting Lugs With Wavy Bottom",
+  images: [
+    img2,
+    img1,
+  ],
+  icons: [
+    { name: "Slot Ventilation", icon: "🪟" },
+    { name: "Stackable", icon: "📦" },
+    { name: "Nestable", icon: "🧩" },
+    { name: "We Recycle", icon: "♻️" }
+  ],
+  colors: ["#1e88e5", "#2e7d32", "#e53935", "#ffb300", "#7e57c2", "#1565c0", "#2f6041"],
+  description: `Featuring a wavy bottom, these trays are used in the harvesting, storage, and processing of asparagus, beans, blueberries, cherries, figs, grapes, mushrooms, and other small to midsize fruits and vegetables.`,
+  features: [
+    "Containers will nest at a ratio of 2.5:1",
+    "Ventilation holes on sides & bottom",
+    "Name and/or logo may be hot stamped on one or both ends",
+    "U. V. stabilizer is available to aid in preventing deterioration of plastic",
+    "Freezer safe",
+    "100% recyclable"
+  ],
+  dimensions: [
+    "23.5”L x 15.75”W x 5”H",
+    "Weight: 2.2 lb",
+    "Load capacity up to 20 lb"
+  ],
+  shipping: [
+    "300 units per pallet",
+    "9000 nested in 53’ trailer"
+  ]
+};
 </script>
 
 <section class="p-10 bg-gray-50">
@@ -180,4 +183,4 @@ function closeImageModal() {
   </div>
 {/if}
 
-<Contact/>
+<Contact />

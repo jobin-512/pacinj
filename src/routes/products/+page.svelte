@@ -13,6 +13,12 @@
     import p10 from "$lib/assets/10/1.png"
     import p11 from "$lib/assets/11/1.png"
     import p12 from "$lib/assets/12/1.jpg"
+    import p13 from "$lib/assets/13/1.jpg"
+    import p14 from "$lib/assets/14/1.jpg"
+    import p15 from "$lib/assets/15/1.jpg"
+    import p16 from "$lib/assets/16/1.jpg"
+    import p17 from "$lib/assets/17/1.jpg"
+    import p18 from "$lib/assets/18/1.jpg"
 
 
 
@@ -29,6 +35,12 @@
     { id: 10, name: "Stacking Tray with open handles", reviews: 35, rating: 5, tag: "New", image: p10 ,link: "/products/10"},
     { id: 11, name: "Harvest Tray", reviews: 16, rating: 4.5, tag: "New", image: p11 ,link: "/products/11"},
     { id: 12, name: "Non Divided Berry Tray", reviews: 10, rating: 4, tag: "New", image: p12 ,link: "/products/12"},
+    { id: 13, name: "Non Divided Berry Tray", reviews: 8, rating: 4.5, tag: "New", image: p13 ,link: "/products/13"},
+    { id: 14, name: "Automation Conveyor Tray", reviews: 6, rating: 4, tag: "New", image: p14 ,link: "/products/14"},
+    { id: 15, name: "Ventilated Produce Tray", reviews: 11, rating: 5, tag: "New", image: p15 ,link: "/products/15"},
+    { id: 16, name: "Divided Berry Tray", reviews: 9, rating: 4, tag: "New", image: p16 ,link: "/products/16"},
+    { id: 17, name: "Mushroom Tray", reviews: 4, rating: 4, tag: "New", image: p17 ,link: "/products/17"},
+    { id: 18, name: "Recycling Tray", reviews: 7, rating: 4.5, tag: "New", image: p18 ,link: "/products/18"},
   ];
 
   let currentPage = 1;
@@ -38,6 +50,7 @@
 
   $: paginatedProducts = products.slice((currentPage - 1) * perPage, currentPage * perPage);
 
+  /** @param {number} page */
   function goToPage(page) {
     if (page >= 1 && page <= totalPages) currentPage = page;
   }

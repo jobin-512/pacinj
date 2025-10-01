@@ -1,12 +1,12 @@
 <script>
-    import img1 from '$lib/assets/6/1.jpg';
-    import img2 from '$lib/assets/6/2.jpg';
-    import img3 from '$lib/assets/6/3.jpg';
+    import img1 from '$lib/assets/17/1.jpg';
     import Contact from "$lib/components/contact.svelte"
 
+/** @type {string | null} */
 let selectedImage = null;
 let showModal = false;
 
+/** @param {string} imageSrc */
 function openImageModal(imageSrc) {
   selectedImage = imageSrc;
   showModal = true;
@@ -18,35 +18,26 @@ function closeImageModal() {
 }
 
   let product = {
-    title: "Half Bushel Basket",
-    images: [
-      img1,
-      img2,
-      img3,
-    ],
-    icons: [
-      { name: "Slot Ventilation", icon: "🪟" },
-      { name: "Stackable", icon: "📦" },
-      { name: "We Recycle", icon: "♻️" }
-    ],
-    colors: ["#d1ecf1", "#d2b48c", "#000000"],
-    description: `Used for drying raspberries, blackberries, blueberries, and strawberries, as well as other smaller fruits and vegetables.`,
-    features: [
-      "3mm ventilation holes",
-      "Designed to fit in standard / bakery racks",
-      "Food grade safe certified",
-      "Freezer safe"
-    ],
-    dimensions: [
-      "25.5”L x 18”W",
-      "Weight: 1.7 lb"
-    ],
-    shipping: [
-      "10 trays per box",
-      "29 boxes per pallet",
-      "30 pallets per truckload"
-    ]
-  };
+  title: "Mushroom Tray",
+  images: [
+    img1,
+  ],
+  icons: [
+    { name: "Stackable", icon: "📦" },
+    { name: "We Recycle", icon: "♻️" }
+  ],
+  colors: ["#1e88e5", "#e53935", "#ffb300", "#7e57c2", "#1565c0", "#2e7d32", "#2f6041"],
+  description: ``,
+  features: [],
+  dimensions: [
+    '18"L x 16"W x 4.75"H',
+    "Weight: 1.6 lb"
+  ],
+  shipping: [
+    "120 trays per pallet",
+    "3600 stacked in 53' trailer"
+  ]
+};
 </script>
 
 <section class="p-10 bg-gray-50">
@@ -180,4 +171,4 @@ function closeImageModal() {
   </div>
 {/if}
 
-<Contact/>
+<Contact />
