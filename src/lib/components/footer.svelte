@@ -10,8 +10,8 @@
       <img src={logo} alt="PIM Logo" class="h-14 mb-6 grayscale-100 invert" />
       <p class="text-base leading-relaxed">
       </p>
-      <div class="bg-gray-200 h-28 w-full flex items-center justify-center mt-6">
-        <div style=""><iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=33759%20Morey%20Avenue%20Abbotsford%20British%20Columbia%20Canada%20V2S%202W5+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/">mappa della popolazione Italia</a></iframe></div>
+      <div class=" h-28 w-full flex items-center justify-center mt-6">
+        <div style=""><iframe title="Map to Pacific Injection Molding" width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=33759%20Morey%20Avenue%20Abbotsford%20British%20Columbia%20Canada%20V2S%202W5+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/">mappa della popolazione Italia</a></iframe></div>
       </div>
     </div>
 
@@ -47,18 +47,16 @@
     <!-- Latest News -->
     <div>
       <h3 class="text-xl font-semibold mb-6">Latest News</h3>
-      <div class="flex gap-5 mb-6">
-        <img src="/" alt="News 1" class="w-20 h-20 object-cover" />
-        <p class="text-base leading-relaxed">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+      <a href="/blog/Why-Ventilated-Totes-Are-Essential-for-Canadian-Produce-Exporters" class="flex gap-5 mb-6 group">
+        <p class="text-base leading-relaxed group-hover:underline">
+          Why Ventilated Totes Are Essential for Canadian Produce Exporters
         </p>
-      </div>
-      <div class="flex gap-5">
-        <img src="/" alt="News 2" class="w-20 h-20 object-cover" />
-        <p class="text-base leading-relaxed">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
+      </a>
+      <a href="/blog/How-Canadian-Dairy-Distributors-Can-Save-Costs-with-Durable-Milk-Crates" class="flex gap-5 group">
+        <p class="text-base leading-relaxed group-hover:underline">
+          How Canadian Dairy Distributors Can Save Costs with Durable Milk Crates
         </p>
-      </div>
+      </a>
     </div>
 
   </div>
@@ -68,7 +66,7 @@
 
   <!-- Bottom Section -->
   <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center text-base text-gray-200 text-center align-middle ">
-    <p>© 2023 WeDesignTech. All Rights Reserved.</p>
+    <p>© 2025 Pacific Injection Molding. All Rights Reserved.</p>
     <div class="flex gap-10 mt-6 md:mt-0">
       <a href="/terms" class="hover:underline">Terms And Condition</a>
       <a href="/privacy" class="hover:underline">Privacy Policy</a>

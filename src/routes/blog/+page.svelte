@@ -6,78 +6,67 @@
   const pageSize = 6;
 
   const posts = [
+    // New posts
     {
-      id: '1',
-      title: 'How We Engineer Durable Injection-Molded Totes',
+      id: 'Packaging-Solutions-for-BC’s-Berry-Farmers-Protecting-Crops-from-Field-to-Market',
+      title: 'Packaging Solutions for BC’s Berry Farmers',
       excerpt:
-        'A behind-the-scenes look at our design principles for strength, longevity, and safety in demanding environments.',
+        'How the right mini, non-divided, and divided berry trays protect crops and boost profits from field to shelf.',
       image:
-        'https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1200&auto=format&fit=crop',
-      category: 'Products',
-      author: 'PIM Team',
-      date: 'Sep 2025',
-      readTime: '5 min'
-    },
-    {
-      id: '2',
-      title: 'Closing the Loop: Practical Recycling for Plastics',
-      excerpt:
-        'What closed-loop recycling looks like in practice, and how it benefits both operations and the planet.',
-      image:
-        'https://images.unsplash.com/photo-1548607086-e7ef42d18084?q=80&w=1200&auto=format&fit=crop',
-      category: 'Sustainability',
-      author: 'Sustainability Office',
-      date: 'Aug 2025',
-      readTime: '6 min'
-    },
-    {
-      id: '3',
-      title: 'Choosing the Right Container: Stack vs. Stack & Nest',
-      excerpt:
-        'A quick guide to help operations managers pick the right container style for their workflow.',
-      image:
-        'https://images.unsplash.com/photo-1610465299990-0f2a8d0a5150?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1498601761256-1b16cf243eb8?q=80&w=1200&auto=format&fit=crop',
       category: 'Guides',
-      author: 'Operations',
-      date: 'Aug 2025',
-      readTime: '4 min'
+      author: 'PIM Team',
+      date: 'Oct 2025',
+      readTime: '8 min'
     },
     {
-      id: '4',
-      title: 'Inside PIM: Our 7-Step Product Development Process',
+      id: 'Sustainable-Agriculture-in-BC-How-Reusable-Harvesting-Lugs-Reduce-Waste',
+      title: 'Sustainable Agriculture in BC: Reusable Harvesting Lugs',
       excerpt:
-        'From discovery to delivery—how we collaborate with customers to build the right solution.',
+        'Why durable, vented, and stackable lugs cut waste, speed harvests, and improve freshness across BC farms.',
       image:
-        'https://images.unsplash.com/photo-1581091870622-7c81d596b43f?q=80&w=1200&auto=format&fit=crop',
-      category: 'Company',
-      author: 'Engineering',
-      date: 'Jul 2025',
+        'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop',
+      category: 'Sustainability',
+      author: 'PIM Team',
+      date: 'Oct 2025',
+      readTime: '8 min'
+    },
+    {
+      id: 'Why-Ventilated-Totes-Are-Essential-for-Canadian-Produce-Exporters',
+      title: 'Why Ventilated Totes Are Essential for Exporters',
+      excerpt:
+        'Ventilated totes reduce spoilage, improve handling, and support sustainability for long-haul produce.',
+      image:
+        'https://images.unsplash.com/photo-1524594227089-03cbf79f1423?q=80&w=1200&auto=format&fit=crop',
+      category: 'Guides',
+      author: 'PIM Team',
+      date: 'Oct 2025',
       readTime: '7 min'
     },
     {
-      id: '5',
-      title: 'Food-Grade Considerations for Agriculture & Processing',
+      id: 'From-Abbotsford-to-Global-Markets-Smart-Packaging-for-Specialty-Crops',
+      title: 'Smart Packaging for Specialty Crops',
       excerpt:
-        'What to know about materials, certifications, and best practices for food-safe handling.',
+        'Trays, baskets, and totes that protect delicate crops while improving efficiency from field to export.',
       image:
-        'https://images.unsplash.com/photo-1506617420156-8e4536971650?q=80&w=1200&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop',
       category: 'Guides',
-      author: 'Quality Team',
-      date: 'Jun 2025',
-      readTime: '6 min'
+      author: 'PIM Team',
+      date: 'Oct 2025',
+      readTime: '9 min'
     },
     {
-      id: '6',
-      title: 'Customer Spotlight: Scaling Efficiently with Stackable Crates',
+      id: 'How-Canadian-Dairy-Distributors-Can-Save-Costs-with-Durable-Milk-Crates',
+      title: 'How Canadian Dairy Distributors Can Save Costs with Durable Milk Crates',
       excerpt:
-        'How a regional distributor reduced handling time by 18% with the right containers.',
+        'Durable milk crates cut product loss, speed handling, and reduce long‑term costs for Canadian distributors.',
       image:
-        'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop',
-      category: 'Company',
-      author: 'Customer Success',
-      date: 'May 2025',
-      readTime: '5 min'
-    }
+        'https://images.unsplash.com/photo-1517959105821-eaf2591984dd?q=80&w=1200&auto=format&fit=crop',
+      category: 'Guides',
+      author: 'PIM Team',
+      date: 'Oct 2025',
+      readTime: '7 min'
+    },
   ];
 
   /** @param {{cat?: string, page?: number}} params */
