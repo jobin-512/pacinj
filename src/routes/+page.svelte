@@ -23,7 +23,7 @@
     import c1 from "$lib/assets/Home page/Meeting.jpg"
     import c2 from "$lib/assets/Home page/Design.jpg"
     import c3 from "$lib/assets/Home page/Prototype.png"
-    import c4 from "$lib/assets/Home page/Analysis.jpg"
+    import c4 from "$lib/assets/Home page/Analysis.png"
     import c5 from "$lib/assets/Home page/Initial Test.png"
     import c6 from "$lib/assets/Home page/Sustainability.jpg"
     import c7 from "$lib/assets/Home page/Recycling.jpg"
@@ -65,14 +65,6 @@
 		};
 	});
 
-	onMount(() => {
-		autoplayInterval = setInterval(() => {
-			nextHero();
-		}, 5000);
-		return () => {
-			if (autoplayInterval) clearInterval(autoplayInterval);
-		};
-	});
 
 	const tabs = [
     "Meeting",
@@ -291,7 +283,7 @@
 			style="background-image: url('{slide.image}'); opacity: {currentSlide === i ? 1 : 0};"
 			aria-hidden={currentSlide !== i}
 		>
-			<div class="absolute inset-0 bg-black/40"></div>
+			<div class="absolute inset-0 bg-black/30"></div>
 			<div class="relative h-full container mx-auto px-4 flex items-center">
 				<div class="max-w-2xl text-white">
 					{#if i === 0}

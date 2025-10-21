@@ -11,7 +11,26 @@
   const menuItems = [
     { name: 'Home', href: '/' },
     { name: 'About P.I.M', href: '/aboutus' },
-    { name: 'Products', href: '/products' },
+    { name: 'Products', href: '/products', subMenu: [
+      { name: 'Size', isCategory: true, subMenu: [
+        { name: '15lbs', href: '/products/9' },
+        { name: '20lbs', href: '/products/7' },
+        { name: '30lbs', href: '/products/8' },
+      ]},
+      { name: 'Category', isCategory: true, subMenu: [
+        { name: 'Agricultural harvesting lugs', href: '/categories/agricultural-harvesting-lugs' },
+        { name: 'Drying Screen', href: '/categories/drying-screen' },
+        { name: 'Berry Tray', href: '/categories/berry-tray' },
+        { name: 'Large Bin', href: '/categories/large-bins' },
+        { name: 'Milk Crates', href: '/categories/milk-crates' },
+        { name: 'Assorted Products', href: '/categories/assorted-products' },
+      ]},
+      { name: 'Produce', isCategory: true, subMenu: [
+        { name: 'Berries', href: '/categories/berry-tray' },
+        { name: 'Milk', href: '/categories/milk-crates' },
+        { name: 'Agricultural Harvesting', href: '/categories/agricultural-harvesting-lugs' },
+      ]},
+    ]},
     { name: 'Recycling', href: '/recycling' },
     { name: 'Custom Molding', href: '/custom-molding' },
     { name: 'Sustainability', href: '/sustainability' },
@@ -63,14 +82,44 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex space-x-6">
+        <nav class="hidden lg:flex space-x-6 relative">
           {#each menuItems as item}
-            <a
-              href={item.href}
-              class="text-gray-800 hover:text-[#426E32] font-medium {$page.url.pathname === item.href ? 'text-[#426E32]' : ''}"
-            >
-              {item.name}
-            </a>
+            <div class="relative group">
+              <a
+                href={item.href}
+                class="text-gray-800 hover:text-[#426E32] font-medium {$page.url.pathname.startsWith(item.href) ? 'text-[#426E32]' : ''} py-4"
+              >
+                {item.name}
+              </a>
+              {#if item.subMenu}
+                <div class="absolute left-0 top-full mt-0 hidden group-hover:flex bg-white shadow-lg rounded-md py-2 min-w-[200px]">
+                   {#each item.subMenu as subItem}
+                     {#if subItem.isCategory}
+                       <div class="flex flex-col">
+                         <span class="block px-4 py-2 font-bold text-gray-900">{subItem.name}</span>
+                         {#if subItem.subMenu}
+                           {#each subItem.subMenu as subSubItem}
+                             <a
+                               href={subSubItem.href}
+                               class="block px-4 py-2 text-gray-800 hover:bg-gray-100 {$page.url.pathname === subSubItem.href ? 'text-[#426E32]' : ''}"
+                             >
+                               {subSubItem.name}
+                             </a>
+                           {/each}
+                         {/if}
+                       </div>
+                     {:else}
+                       <a
+                         href={subItem.href}
+                         class="block px-4 py-2 text-gray-800 hover:bg-gray-100 {$page.url.pathname.startsWith(subItem.href) ? 'text-[#426E32]' : ''}"
+                       >
+                         {subItem.name}
+                       </a>
+                     {/if}
+                   {/each}
+                 </div>
+              {/if}
+            </div>
           {/each}
           <a
             href="/contactus"
@@ -94,17 +143,50 @@
   {#if isMenuOpen}
     <nav class="lg:hidden bg-white border-t py-4 px-4 shadow-lg">
       {#each menuItems as item}
-        <a
-          href={item.href}
-          class="block py-2 text-gray-800 hover:text-red-600 {$page.url.pathname === item.href ? 'text-red-600' : ''}"
-        >
-          {item.name}
-        </a>
+        <div class="relative">
+          <a
+            href={item.href}
+            on:click|preventDefault={ (e) => { e.stopPropagation(); if(item.subMenu) { item.isOpen = !item.isOpen } else { toggleMenu() } }}
+            class="block py-2 text-gray-800 hover:text-[#426E32] {$page.url.pathname.startsWith(item.href) ? 'text-[#426E32]' : ''}"
+          >
+            {item.name}
+          </a>
+          {#if item.subMenu && item.isOpen}
+            <div class="pl-4 border-l-2 border-gray-200 ml-2">
+              {#each item.subMenu as subItem}
+                {#if subItem.isCategory}
+                  <div class="flex flex-col">
+                    <span class="block py-2 font-bold text-gray-900">{subItem.name}</span>
+                    {#if subItem.subMenu}
+                      {#each subItem.subMenu as subSubItem}
+                        <a
+                          href={subSubItem.href}
+                          on:click={toggleMenu}
+                          class="block py-2 text-gray-800 hover:text-[#426E32] {$page.url.pathname === subSubItem.href ? 'text-[#426E32]' : ''}"
+                        >
+                          {subSubItem.name}
+                        </a>
+                      {/each}
+                    {/if}
+                  </div>
+                {:else}
+                  <a
+                    href={subItem.href}
+                    on:click={toggleMenu}
+                    class="block py-2 text-gray-800 hover:text-[#426E32] {$page.url.pathname.startsWith(subItem.href) ? 'text-[#426E32]' : ''}"
+                  >
+                    {subItem.name}
+                  </a>
+                {/if}
+              {/each}
+            </div>
+          {/if}
+        </div>
       {/each}
       <div class="mt-4 pt-4 border-t">
         <a
           href="/contactus"
-          class="block w-full text-center bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors"
+          class="block w-full text-center bg-[#426E32] text-white px-6 py-2 rounded hover:bg-green-700 transition-colors"
         >
           Get in Touch
         </a>
