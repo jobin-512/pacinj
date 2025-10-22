@@ -30,6 +30,7 @@
         <div>
           <p class="text-sm tracking-widest text-green-700 font-semibold mb-4 uppercase">Pacific Injection Molding</p>
           <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Who We Are?</h2>
+          <p class="text-gray-700 leading-relaxed mb-5 ">Pacific Injection Molding, started in 1971, we are a proud manufacturer of plastic products. Our mission is to provide reusable, affordable products of exceptional quality using advanced injection molding technology. We service valued customers in Canada, the U.S., and Mexico. We are dedicated to offering the best pricing and delivery times while expanding our product lines with custom solutions tailored to meet our customers’ needs. Our goal is to enhance our customers’ experience through exceptional service and beautifully crafted plastic products. We also promote environmental mindfulness by offering a recycling program that rewards our customers with financial savings.</p>
           <p class="text-gray-700 leading-relaxed mb-5">
             At Pacific Injection Molding LTD (PIM), we don’t just mold plastic—we shape solutions.
             Based in Canada with a growing footprint across the U.S. and Mexico, we specialize in
