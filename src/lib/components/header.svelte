@@ -92,16 +92,16 @@
                 {item.name}
               </a>
               {#if item.subMenu}
-                <div class="absolute left-0 top-full mt-0 hidden group-hover:flex bg-white shadow-lg rounded-md py-2 min-w-[200px]">
+                <div class="absolute left-0 top-full gap-6 mt-0 hidden group-hover:flex bg-white shadow-lg rounded-md py-2 min-w-[200px]">
                    {#each item.subMenu as subItem}
                      {#if subItem.isCategory}
-                       <div class="flex flex-col">
+                       <div class="flex flex-col ">
                          <span class="block px-4 py-2 font-bold text-gray-900">{subItem.name}</span>
                          {#if subItem.subMenu}
                            {#each subItem.subMenu as subSubItem}
                              <a
                                href={subSubItem.href}
-                               class="block px-4 py-2 text-gray-800 hover:bg-gray-100 {$page.url.pathname === subSubItem.href ? 'text-[#426E32]' : ''}"
+                               class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-ellipsis overflow-hidden whitespace-nowrap {$page.url.pathname.startsWith(subSubItem.href) ? 'text-[#426E32]' : ''}"
                              >
                                {subSubItem.name}
                              </a>
